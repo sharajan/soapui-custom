@@ -1,0 +1,492 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1686686795.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"custCode",
+		"memberNo",
+		"memberHash",
+		"firstName",
+		"lastName",
+		"birthDate",
+		"deathDate",
+		"email",
+		"mobile",
+		"home",
+		"customerFlags",
+		"accounts"
+	],
+	"properties": {
+		
+		"memberNo": {
+			"$id": "#root/memberNo", 
+			"title": "Memberno", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"4027130073"
+			],
+			"pattern": "^.*$"
+		},
+		"memberHash1": {
+			"$id": "#root/memberHash", 
+			"title": "Memberhash", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b"
+			],
+			"pattern": "^.*$"
+		},
+		"firstName": {
+			"$id": "#root/firstName", 
+			"title": "Firstname", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Anatollo"
+			],
+			"pattern": "^.*$"
+		},
+		"lastName": {
+			"$id": "#root/lastName", 
+			"title": "Lastname", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"Kuhlen"
+			],
+			"pattern": "^.*$"
+		},
+		"birthDate": {
+			"$id": "#root/birthDate", 
+			"title": "Birthdate", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/birthDate/items", 
+				"title": "Items", 
+				"type": "integer",
+				"examples": [
+					1960
+				],
+				"default": 0
+			}
+		},
+		"deathDate": {
+			"$id": "#root/deathDate", 
+			"title": "Deathdate", 
+			"type": "null",
+			"default": null
+		},
+		"email": {
+			"$id": "#root/email", 
+			"title": "Email", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"akuhlen0@epa.gov"
+			],
+			"pattern": "^.*$"
+		},
+		"mobile": {
+			"$id": "#root/mobile", 
+			"title": "Mobile", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"398-709-8500"
+			],
+			"pattern": "^.*$"
+		},
+		"home": {
+			"$id": "#root/home", 
+			"title": "Home", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"815-492-3856"
+			],
+			"pattern": "^.*$"
+		},
+		"customerFlags": {
+			"$id": "#root/customerFlags", 
+			"title": "Customerflags", 
+			"type": "object",
+			"required": [
+				"id",
+				"memberHash",
+				"veteranYear",
+				"vip",
+				"homeLoan",
+				"carLoan",
+				"smallBusinessAccount",
+				"veteran"
+			],
+			"properties": {
+				"id": {
+					"$id": "#root/customerFlags/id", 
+					"title": "Id", 
+					"type": "integer",
+					"examples": [
+						1
+					],
+					"default": 0
+				},
+				"memberHash": {
+					"$id": "#root/customerFlags/memberHash", 
+					"title": "Memberhash", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b"
+					],
+					"pattern": "^.*$"
+				},
+				"veteranYear": {
+					"$id": "#root/customerFlags/veteranYear", 
+					"title": "Veteranyear", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"1996"
+					],
+					"pattern": "^.*$"
+				},
+				"vip": {
+					"$id": "#root/customerFlags/vip", 
+					"title": "Vip", 
+					"type": "boolean",
+					"examples": [
+						false
+					],
+					"default": true
+				},
+				"homeLoan": {
+					"$id": "#root/customerFlags/homeLoan", 
+					"title": "Homeloan", 
+					"type": "boolean",
+					"examples": [
+						false
+					],
+					"default": true
+				},
+				"carLoan": {
+					"$id": "#root/customerFlags/carLoan", 
+					"title": "Carloan", 
+					"type": "boolean",
+					"examples": [
+						false
+					],
+					"default": true
+				},
+				"smallBusinessAccount": {
+					"$id": "#root/customerFlags/smallBusinessAccount", 
+					"title": "Smallbusinessaccount", 
+					"type": "boolean",
+					"examples": [
+						false
+					],
+					"default": true
+				},
+				"veteran": {
+					"$id": "#root/customerFlags/veteran", 
+					"title": "Veteran", 
+					"type": "boolean",
+					"examples": [
+						true
+					],
+					"default": true
+				}
+			}
+		}
+,
+		"accounts": {
+			"$id": "#root/accounts", 
+			"title": "Accounts", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/accounts/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"acctYear",
+					"acctHash",
+					"id",
+					"memberHash",
+					"balance",
+					"addressHash",
+					"address",
+					"transactions"
+				],
+				"properties": {
+					"acctYear": {
+						"$id": "#root/accounts/items/acctYear", 
+						"title": "Acctyear", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"2007"
+						],
+						"pattern": "^.*$"
+					},
+					"acctHash": {
+						"$id": "#root/accounts/items/acctHash", 
+						"title": "Accthash", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b"
+						],
+						"pattern": "^.*$"
+					},
+					"id": {
+						"$id": "#root/accounts/items/id", 
+						"title": "Id", 
+						"type": "integer",
+						"examples": [
+							1
+						],
+						"default": 0
+					},
+					"memberHash": {
+						"$id": "#root/accounts/items/memberHash", 
+						"title": "Memberhash", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b"
+						],
+						"pattern": "^.*$"
+					},
+					"balance": {
+						"$id": "#root/accounts/items/balance", 
+						"title": "Balance", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"113051.31"
+						],
+						"pattern": "^.*$"
+					},
+					"addressHash": {
+						"$id": "#root/accounts/items/addressHash", 
+						"title": "Addresshash", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"471ad4c4-56fd-4758-b76d-54760a821138"
+						],
+						"pattern": "^.*$"
+					},
+					"address": {
+						"$id": "#root/accounts/items/address", 
+						"title": "Address", 
+						"type": "object",
+						"required": [
+							"id",
+							"streetNum",
+							"street",
+							"address2",
+							"city",
+							"state",
+							"zipCode",
+							"county",
+							"country"
+						],
+						"properties": {
+							"id": {
+								"$id": "#root/accounts/items/address/id", 
+								"title": "Id", 
+								"type": "integer",
+								"examples": [
+									1
+								],
+								"default": 0
+							},
+							"streetNum": {
+								"$id": "#root/accounts/items/address/streetNum", 
+								"title": "Streetnum", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"19579"
+								],
+								"pattern": "^.*$"
+							},
+							"street": {
+								"$id": "#root/accounts/items/address/street", 
+								"title": "Street", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"Lerdahl"
+								],
+								"pattern": "^.*$"
+							},
+							"address2": {
+								"$id": "#root/accounts/items/address/address2", 
+								"title": "Address2", 
+								"type": "null",
+								"default": null
+							},
+							"city": {
+								"$id": "#root/accounts/items/address/city", 
+								"title": "City", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"Oakland"
+								],
+								"pattern": "^.*$"
+							},
+							"state": {
+								"$id": "#root/accounts/items/address/state", 
+								"title": "State", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"CA"
+								],
+								"pattern": "^.*$"
+							},
+							"zipCode": {
+								"$id": "#root/accounts/items/address/zipCode", 
+								"title": "Zipcode", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"94622"
+								],
+								"pattern": "^.*$"
+							},
+							"county": {
+								"$id": "#root/accounts/items/address/county", 
+								"title": "County", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									""
+								],
+								"pattern": "^.*$"
+							},
+							"country": {
+								"$id": "#root/accounts/items/address/country", 
+								"title": "Country", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"United States"
+								],
+								"pattern": "^.*$"
+							}
+						}
+					}
+,
+					"transactions": {
+						"$id": "#root/accounts/items/transactions", 
+						"title": "Transactions", 
+						"type": "array",
+						"default": [],
+						"items":{
+							"$id": "#root/accounts/items/transactions/items", 
+							"title": "Items", 
+							"type": "object",
+							"required": [
+								"id",
+								"acctHash",
+								"acctYear",
+								"description",
+								"createdOn",
+								"updatedOn",
+								"metadata"
+							],
+							"properties": {
+								"id": {
+									"$id": "#root/accounts/items/transactions/items/id", 
+									"title": "Id", 
+									"type": "integer",
+									"examples": [
+										1
+									],
+									"default": 0
+								},
+								"acctHash": {
+									"$id": "#root/accounts/items/transactions/items/acctHash", 
+									"title": "Accthash", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b"
+									],
+									"pattern": "^.*$"
+								},
+								"acctYear": {
+									"$id": "#root/accounts/items/transactions/items/acctYear", 
+									"title": "Acctyear", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"2007"
+									],
+									"pattern": "^.*$"
+								},
+								"description": {
+									"$id": "#root/accounts/items/transactions/items/description", 
+									"title": "Description", 
+									"type": "string",
+									"default": "",
+									"examples": [
+										"Labial frenotomy"
+									],
+									"pattern": "^.*$"
+								},
+								"createdOn": {
+									"$id": "#root/accounts/items/transactions/items/createdOn", 
+									"title": "Createdon", 
+									"type": "array",
+									"default": [],
+									"items":{
+										"$id": "#root/accounts/items/transactions/items/createdOn/items", 
+										"title": "Items", 
+										"type": "integer",
+										"examples": [
+											1958
+										],
+										"default": 0
+									}
+								},
+								"updatedOn": {
+									"$id": "#root/accounts/items/transactions/items/updatedOn", 
+									"title": "Updatedon", 
+									"type": "array",
+									"default": [],
+									"items":{
+										"$id": "#root/accounts/items/transactions/items/updatedOn/items", 
+										"title": "Items", 
+										"type": "integer",
+										"examples": [
+											2021
+										],
+										"default": 0
+									}
+								},
+								"metadata": {
+									"$id": "#root/accounts/items/transactions/items/metadata", 
+									"title": "Metadata", 
+									"type": "null",
+									"default": null
+								}
+							}
+						}
+
+					}
+				}
+			}
+
+		}
+	}
+}

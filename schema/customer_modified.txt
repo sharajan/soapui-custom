@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "properties": {
+    "custCode": { "type": "integer" },
+    "memberNo": { "type": "string", "format": "utc-millisec" },
+    "memberHash": { "type": "string" },
+    "firstName": { "type": "string" },
+    "lastName": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "mobile": { "type": "string" },
+    "home": { "type": "string" },
+    "customerFlags": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "memberHash": { "type": "string" },
+        "veteranYear": { "type": "string", "format": "utc-millisec" },
+        "vip": { "type": "boolean" },
+        "homeLoan": { "type": "boolean" },
+        "carLoan": { "type": "boolean" },
+        "smallBusinessAccount": { "type": "boolean" },
+        "veteran": { "type": "boolean" }
+      }
+    },
+    "accounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "acctYear": { "type": "string", "format": "utc-millisec" },
+          "acctHash": { "type": "string" },
+          "id": { "type": "integer" },
+          "memberHash": { "type": "string" },
+          "balance": { "type": "string" },
+          "addressHash": { "type": "string" },
+          "address": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "integer" },
+              "streetNum": { "type": "string", "format": "utc-millisec" },
+              "street": { "type": "string" },
+              "address2": { "type": "null" },
+              "city": { "type": "string" },
+              "state": { "type": "string" },
+              "zipCode": { "type": "string", "format": "utc-millisec" },
+              "county": { "type": "string" },
+              "country": { "type": "string" }
+            }
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "integer" },
+                "acctHash": { "type": "string" },
+                "acctYear": { "type": "string", "format": "utc-millisec" },
+                "description": { "type": "string" },
+                "metadata": { "type": "null" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "deathDate": { "type": "null" }
+  }
+}

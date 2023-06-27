@@ -1,0 +1,253 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome3",
+    "definitions": {
+        "Welcome3": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "custCode": {
+                    "type": "integer"
+                },
+                "memberNo": {
+                    "type": "string"
+                },
+                "memberHash": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "home": {
+                    "type": "string"
+                },
+                "customerFlags": {
+                    "$ref": "#/definitions/CustomerFlags"
+                },
+                "accounts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Account"
+                    }
+                },
+                "birthDate": {
+                    "type": "string"
+                },
+                "deathDate": {
+ 				 "anyOf": [
+    						{ "type": "string" },
+    						{ "type": "null" }
+  					  ] 
+		}
+            },
+            "required": [
+                "accounts",
+                "birthDate",
+                "custCode",
+                "customerFlags",
+                "deathDate",
+                "email",
+                "firstName",
+                "home",
+                "lastName",
+                "memberHash",
+                "memberNo",
+                "mobile"
+            ],
+            "title": "Welcome3"
+        },
+        "Account": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "acctYear": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "acctHash": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "memberHash": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "balance": {
+                    "type": "string"
+                },
+                "addressHash": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "address": {
+                    "$ref": "#/definitions/Address"
+                },
+                "transactions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Transaction"
+                    }
+                }
+            },
+            "required": [
+                "acctHash",
+                "acctYear",
+                "address",
+                "addressHash",
+                "balance",
+                "id",
+                "memberHash",
+                "transactions"
+            ],
+            "title": "Account"
+        },
+        "Address": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "streetNum": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "street": {
+                    "type": "string"
+                },
+                "address2": {
+ 				 "anyOf": [
+    						{ "type": "string" },
+    						{ "type": "null" }
+  					  ] 
+		},
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zipCode": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "county": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "address2",
+                "city",
+                "country",
+                "county",
+                "id",
+                "state",
+                "street",
+                "streetNum",
+                "zipCode"
+            ],
+            "title": "Address"
+        },
+        "Transaction": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "acctHash": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "acctYear": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "metadata": {
+ 				 "anyOf": [
+    						{ "type": "string" },
+    						{ "type": "null" }
+  					  ] 
+		},
+                "createdOn": {
+                    "type": "string"
+                },
+                "updatedOn": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "acctHash",
+                "acctYear",
+                "createdOn",
+                "description",
+                "id",
+                "metadata",
+                "updatedOn"
+            ],
+            "title": "Transaction"
+        },
+        "CustomerFlags": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "memberHash": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "veteranYear": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "vip": {
+                    "type": "boolean"
+                },
+                "homeLoan": {
+                    "type": "boolean"
+                },
+                "carLoan": {
+                    "type": "boolean"
+                },
+                "smallBusinessAccount": {
+                    "type": "boolean"
+                },
+                "veteran": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "carLoan",
+                "homeLoan",
+                "id",
+                "memberHash",
+                "smallBusinessAccount",
+                "veteran",
+                "veteranYear",
+                "vip"
+            ],
+            "title": "CustomerFlags"
+        }
+    }
+}

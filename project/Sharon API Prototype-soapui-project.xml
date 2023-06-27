@@ -1,0 +1,2298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="54303ed2-bf81-40ef-ae90-ab65663ce453" activeEnvironment="Default" name="Sharon API Prototype" resourceRoot="${projectDir}" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ProjectSettings@hermesConfig">${#System#user.home}\.hermes}</con:setting></con:settings><con:interface xsi:type="con:RestService" id="92522693-40ca-48cd-80cc-482034da3afc" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8090" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8090</con:endpoint></con:endpoints><con:resource name="getCustomerHash" path="/v1/customer/{memberNo}/hash" id="3586738a-8cc7-4dfd-8157-7005da084763"><con:settings/><con:parameters><con:parameter><con:name>memberNo</con:name><con:value>12</con:value><con:style>TEMPLATE</con:style><con:default>12</con:default></con:parameter></con:parameters><con:method name="Method 1" id="1a45d5fe-2917-4089-a99c-d76c9f19f334" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500 404</con:status><con:params/><con:element xmlns:ns="http://localhost/v1/getCustomerHash/4788331624">ns:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="Request 1" id="a6831a14-95e0-40f8-8532-f98883a9a1b5" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request/><con:originalUri>http://localhost/v1/getCustomerHash/4788331624</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="memberNo" value="4788331624" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>memberNo</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getCustomer" path="/v1/getCustomer/{memberNo}" id="b177bf54-1c9a-4d6d-aa1f-d6472a846d5b"><con:settings/><con:parameters><con:parameter><con:name>memberNo</con:name><con:value>memberNo</con:value><con:style>TEMPLATE</con:style><con:default>memberNo</con:default></con:parameter></con:parameters><con:method name="Method 1" id="4d95d61f-f60e-433d-bb71-76ace40de523" method="GET"><con:settings><con:setting id="RecordResponseRepresentations">true</con:setting></con:settings><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://localhost/v1/getCustomer/4788331624">ns:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404 500</con:status><con:params/><con:element xmlns:ns="http://localhost/v1/getCustomer/4788331624">ns:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="ea4a63eb-6205-407e-b65f-0c094885c14a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request/><con:originalUri>http://localhost/v1/getCustomer/4788331624</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="memberNo" value="4027130073" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request></con:method></con:resource><con:resource name="getCustomerAccounts" path="/v1/customer/{memberNo}/accounts" id="c58b5392-3b5d-4dfe-bb09-9e12305eb751"><con:settings/><con:parameters><con:parameter><con:name>memberNo</con:name><con:value>memberNo</con:value><con:style>TEMPLATE</con:style><con:default>memberNo</con:default></con:parameter></con:parameters><con:method name="Method 1" id="c9f91b55-30ea-404e-b54e-02bd2a607f36" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:acc="http://localhost/v1/getCustomer/4788331624/accounts">acc:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/plain;charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="f96b9bd8-07de-4cd2-a60e-9ff418d40293" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request/><con:originalUri>http://localhost/v1/getCustomer/4788331624/accounts</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="memberNo" value="3216549870" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request></con:method></con:resource><con:resource name="getCustomerFlags" path="/v1/customer/{memberNo}/flags" id="5775cc3f-d68b-4ea7-aec7-d4f87f431c33"><con:settings/><con:parameters><con:parameter><con:name>memberNo</con:name><con:value>memberNo</con:value><con:style>TEMPLATE</con:style><con:default>memberNo</con:default></con:parameter></con:parameters><con:method name="Method 1" id="c37eb739-6d89-4fc7-8bbb-e40442e8d425" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:flag="http://localhost/v1/customer/3216549870/flags">flag:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:flag="http://localhost/v1/customer/3216549870/flags">flag:Fault</con:element></con:representation><con:request name="Request 1" id="666acda1-8156-4f04-b4be-516a0aee069f" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request/><con:originalUri>http://localhost/v1/customer/3216549870/flags</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="memberNo" value="3216549870" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request></con:method></con:resource><con:resource name="bulkGetCustomerHash" path="/v2/account/hash" id="cabf571a-4c76-4ce4-92d7-06b75be68a50"><con:settings/><con:parameters/><con:method name="Method 1" id="5b01f485-c9a4-4bc5-b706-a02130d14794" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400 500 404</con:status><con:params/><con:element xmlns:hash="http://localhost/v2/account/hash">hash:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="dc67b652-3a45-4e25-b7ea-f8ab3a447d7f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request>{
+	"targets":["1001077768","4218872937","6307244763"]
+}</con:request><con:originalUri>http://localhost/v2/account/hash</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="bulkGetCustomer" path="/v2/account/customer" id="0907ed06-d0e5-471d-8e3a-a0ef732c67d5"><con:settings/><con:parameters/><con:method name="Method 1" id="a5b9ed62-939d-4ae7-8e9a-862c50d730a7" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400 500</con:status><con:params/><con:element xmlns:cus="http://localhost/v2/account/customer">cus:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="b79bb86d-ab1a-4cbc-b9df-4f76197761ec" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request>{
+    "targets":["3216549870","4027130073","6393309008"]
+}
+
+
+</con:request><con:originalUri>http://localhost/v2/account/customer</con:originalUri><con:credentials><con:selectedAuthProfile>Profile 1</con:selectedAuthProfile><con:authType>OAuth 2.0</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="bulkGetCustomerAccount" path="/v2/account" id="ed1fd324-7888-4a7b-94ef-f885295e208a"><con:settings/><con:parameters/><con:method name="Method 1" id="3ae7652a-e11a-4cf0-906e-c4aaa17070aa" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:acc="http://localhost/v2/account">acc:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="5c6107b9-f534-45bf-85fb-b7184ca2c458" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request>{
+    "targets":["4788331624","4027130073","6393309008"]
+}
+</con:request><con:originalUri>http://localhost/v2/account</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="716ec3a8-b348-4619-9c56-f94c759b8479" name="TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="59436614-953f-41a6-a571-a531d1d1c524" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase Happy Path" searchProperties="true" disabled="true"><con:settings/><con:testStep type="groovy" name="InitializeHelpers" id="e192a6fe-cdf6-44b1-8fb5-1d2d1f6890d6"><con:settings/><con:config><script>//Instantiate ResponseValidation class
+
+def currentProject = testRunner.testCase.testSuite.project
+currentProject
+    .testSuites["TestSuite"]
+       .testCases["utils"]
+          .testSteps["ResponseValidation"]
+             .run(testRunner, context)
+
+
+currentProject.metaClass.ResponseValidation = context.ResponseValidation
+
+//Load Properties</script></con:config></con:testStep><con:testStep type="groovy" name="LoadProperty" id="0bac35a1-5639-4b52-a79c-48016b5e135d"><con:settings/><con:config><script>
+log.info "File Reader Class Init"
+
+//Get Project Property
+log.info  testRunner.testCase.testSuite.project.getPath().split("\\\\").length
+def pathname = testRunner.testCase.testSuite.project.getPath()
+def projectScriptPath =  pathname.take(pathname.lastIndexOf("\\"))
+def projectPath =  projectScriptPath.take(projectScriptPath.lastIndexOf("\\"))
+
+//Set Global Suite Properties to access Test Automation Folder Structure assets
+testRunner.testCase.testSuite.setPropertyValue("ProjectPath", projectPath)
+testRunner.testCase.testSuite.setPropertyValue("ProjectScriptPath", projectScriptPath)
+testRunner.testCase.testSuite.setPropertyValue("ProjectDataPath", projectPath.concat("\\data"))
+
+log.info testRunner.testCase.testSuite.getProperty("ProjectDataPath").value
+</script></con:config></con:testStep><con:testStep type="groovy" name="Set Connection Properties" id="986ecf50-9f6a-4542-ae43-901a01adcb60"><con:settings/><con:config><script>import com.eviware.soapui.support.*;
+
+//Execute DB Validation (Method Calls to the DBVerify in the DBVerification_Updated 
+def fileName = "connection.properties"
+def filePath = testRunner.testCase.testSuite.getPropertyValue("ProjectDataPath").concat("\\").concat(fileName)
+//def filePath = "C:/srajan/IRS/TestAutomation/soapui/Sam/connection.properties"
+def testSuite = testRunner.testCase.testSuite.getName()
+
+// Load ExpectedValues for DB Validation
+def currentProject = testRunner.testCase.testSuite.project
+currentProject
+    .testSuites."TestSuite"
+       .testCases["utils"]
+          .testSteps["LoadProperties"]
+             .run(testRunner, context)
+
+context.FileReaderUtil.loadProp(filePath).each{
+	testRunner.testCase.testSuite.setPropertyValue( it.key, it.value)
+}
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="GetCustomerFromDB" id="44f20ea5-198d-4dd2-87a6-78a9f8cb9092"><con:settings/><con:config><script>import com.example.webfluxdemo.domain.Customer
+import com.fasterxml.jackson.databind.ObjectMapper 
+import com.fasterxml.jackson.annotation.JsonProperty 
+import groovy.json.JsonOutput 
+import com.google.gson.Gson
+
+
+def currentProject = testRunner.testCase.testSuite.project
+currentProject
+    .testSuites."TestSuite"
+       .testCases["utils"]
+          .testSteps["DatabaseUtils"]
+             .run(testRunner, context)
+
+def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+def url = testRunner.testCase.testSuite.getPropertyValue("url")
+def user = testRunner.testCase.testSuite.getPropertyValue("user")
+def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+
+def query = "select * from cust_info where member_no= '4027130073'"
+def rows = context.DatabaseUtils.executeQuery( driver,url,user, pass,query)
+def member_hash =  rows[0].member_hash
+log.info rows
+
+currentProject.metaClass.cust_info = rows
+
+query = "SELECT * FROM cust_acct WHERE member_hash = '"+member_hash+"'"
+rows = context.DatabaseUtils.executeQuery( driver,url,user, pass,query)
+currentProject.metaClass.cust_acct = rows
+def address_hash = rows[0].address_hash
+
+query = "SELECT * FROM cust_trans WHERE acct_hash = '"+member_hash+"'"
+rows = context.DatabaseUtils.executeQuery( driver,url,user, pass,query)
+currentProject.metaClass.cust_trans = rows
+
+
+query = "SELECT * FROM address WHERE address_hash = '"+address_hash+"'"
+rows = context.DatabaseUtils.executeQuery( driver,url,user, pass,query)
+currentProject.metaClass.cust_addr = rows
+
+query = "SELECT * FROM cust_flag WHERE member_hash = '"+member_hash+"'"
+rows = context.DatabaseUtils.executeQuery( driver,url,user, pass,query)
+currentProject.metaClass.cust_flag = rows
+
+//log.info rows.size</script></con:config></con:testStep><con:testStep type="restrequest" name="getCustomer" id="2b433fc9-307d-4ebc-81da-c377078822ac"><con:settings/><con:config service="http://localhost:8090" resourcePath="/v1/getCustomer/{memberNo}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getCustomer" id="ea4a63eb-6205-407e-b65f-0c094885c14a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request/><con:originalUri>http://localhost/v1/getCustomer/4788331624</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="a10696f7-c10a-4c8e-9cc6-530b654cb72f" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="9f5b0c4f-5b88-4289-99b4-9c062b783e3d" name="Script - KeyChecker"><con:configuration><scriptText>//dale
+//Groovy Script to verify all information headers of request are present as expected
+
+//take response object
+def response_message = messageExchange.responseContent
+
+//convert response object into json
+def response_json = new groovy.json.JsonSlurper().parseText(response_message)
+
+//create variable containing all the json keys returned
+def json_key = response_json.keySet()
+
+//Create new array of Json keys that SHOULD be returned in a request. Edit this depending on the script being tested
+def json_keycheck = ["custCode","memberNo","memberHash","firstName","lastName","birthDate",
+"deathDate","email","mobile","customerFlags","accounts"]
+
+assert true
+
+//loop used to verify all headers are accurately present in response body. Will return error if headers are missing
+for (def i=0;i&lt;json_keycheck.size();i++){
+	for (def j=0;json_key.size()+1;j++){
+		if (j == json_key.size()+1){
+			log.info("request header missing: ${json_keycheck[i]}")//if response message is missing key, will tell which one here
+			assert false
+		}else if (json_keycheck[i] == json_key[j]){
+			break
+		}
+	}
+}
+
+log.info("Request Completed Successfully")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="d5c44603-205e-40dd-be73-60b0726ce673" name="Schema Validation"><con:configuration><scriptText>import java.io.InputStream;   
+import java.util.Set;  
+  
+import com.fasterxml.jackson.databind.JsonNode;  
+import com.fasterxml.jackson.databind.ObjectMapper;  
+import com.networknt.schema.JsonSchema;  
+import com.networknt.schema.JsonSchemaFactory;  
+import com.networknt.schema.SpecVersion;  
+import com.networknt.schema.ValidationMessage;  
+
+// create instance of the ObjectMapper class  
+ ObjectMapper objectMapper = new ObjectMapper();  
+          
+ // create an instance of the JsonSchemaFactory using version flag  
+ JsonSchemaFactory schemaFactory = JsonSchemaFactory.getInstance( SpecVersion.VersionFlag.V201909 ); 
+
+ //take response object
+def response_message = messageExchange.responseContent
+          
+// store the JSON data in InputStream  
+File initialFile = new File("C:\\srajan\\IRS\\TestAutomation\\soapui\\tis_automation\\schema\\customer_new.txt");
+ try(  
+               
+    			 InputStream schemaStream = new FileInputStream(initialFile);
+                
+    ){  
+
+            // read data from the stream and store it into JsonNode  
+            JsonNode json = objectMapper.readTree(response_message);  
+               
+              
+            // get schema from the schemaStream and store it into JsonSchema  
+            JsonSchema schema = schemaFactory.getSchema(schemaStream);  
+              
+            // create set of validation message and store result in it  
+            Set&lt;ValidationMessage> validationResult = schema.validate( json );  
+            
+             // show the validation errors   
+            if (validationResult.isEmpty()) {  
+
+                assert true
+              
+            } else {  
+                  
+                // show all the validation error  
+                validationResult.forEach(vm -> log.info(vm.getMessage())); 
+                assert false 
+            }  
+        }  
+  </scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="25212137-7e63-4661-8ca5-d97dcb12b300" name="Script Assertion 2"><con:configuration><scriptText>
+context.testCase.testSuite.project.ResponseValidation.validateSchema(messageExchange.responseContent,"C:\\srajan\\IRS\\TestAutomation\\soapui\\tis_automation\\schema\\customer_new.txt")
+
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="memberNo" value="${#TestSuite#memberNumber}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="08ea5bbc-7a36-43a8-9437-7592ba5fdf33"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>w</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>getCustomer</con:sourceStep><con:targetType>Response</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:targetPath/><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="Deserialze" id="1fe48bd0-fab1-4632-aad9-e3d94053b1fe" disabled="true"><con:settings/><con:config><script>import com.example.webfluxdemo.domain.Customer
+import com.fasterxml.jackson.databind.ObjectMapper // version 2.11.1
+import com.fasterxml.jackson.annotation.JsonProperty // version 2.11.1
+import groovy.json.JsonOutput 
+import com.google.gson.Gson
+//import com.google.gson.Gson
+
+def cust_info =  testRunner.testCase.testSuite.project.cust_info[0]
+
+def Customer cust = Customer.builder()
+							.custCode(cust_info.cust_code)
+							.memberNo(cust_info.member_no)
+							.memberHash(cust_info.member_hash)
+							.firstName(cust_info.first_name)
+							.lastName(cust_info.last_name)
+							.birthDate(cust_info.birth_date.toLocalDate())
+							.deathDate((cust_info.death_date == null)?null : cust_info.death_date.toLocalDate())
+							.email(cust_info.email)
+							.mobile(cust_info.mobile)
+							.home(cust_info.home)
+							.build()
+//groovy.sql.GroovyRowResult to JSON
+//def addressRecord =  testRunner.testCase.testSuite.project.addressRecord[0] 
+
+def response =  testRunner.testCase.getProperty("Response").value
+Gson gson = new Gson();
+Customer cust_response = gson.fromJson(response, Customer.class);
+ 
+
+//employees.address = address
+
+//Gson gson = new Gson();
+//Address a1 = gson.fromJson(testRunner.testCase.testSuite.project.employeeRecord[0], Employee.class);
+ 
+log.info "e1" + cust</script></con:config></con:testStep><con:testStep type="groovy" name="BuildCustomerObjectFromJson" id="c6a3e87a-a029-4a13-9df4-bd252bd1d9e9"><con:settings/><con:config><script>import com.example.webfluxdemo.domain.Customer
+import com.example.webfluxdemo.domain.Transaction
+import com.example.webfluxdemo.domain.Account
+import com.example.webfluxdemo.domain.Address
+import com.example.webfluxdemo.domain.CustomerFlag
+import com.fasterxml.jackson.databind.ObjectMapper // version 2.11.1
+import com.fasterxml.jackson.annotation.JsonProperty // version 2.11.1
+import groovy.json.JsonOutput 
+import com.google.gson.Gson
+import groovy.json.JsonSlurper
+import java.time.LocalDate;
+//import com.google.gson.Gson
+
+def cust_info =  testRunner.testCase.testSuite.project.cust_info[0]
+def cust_flag =  testRunner.testCase.testSuite.project.cust_flag[0]
+def cust_trans = testRunner.testCase.testSuite.project.cust_trans[0]
+def cust_addr = testRunner.testCase.testSuite.project.cust_addr[0]
+def cust_acct = testRunner.testCase.testSuite.project.cust_acct
+
+Customer cust = Customer.builder()
+							.custCode(cust_info.cust_code)
+							.memberNo(cust_info.member_no)
+							.memberHash(cust_info.member_hash)
+							.firstName(cust_info.first_name)
+							.lastName(cust_info.last_name)
+							.birthDate(cust_info.birth_date.toLocalDate())
+							.deathDate((cust_info.death_date == null)?null : cust_info.death_date.toLocalDate())
+							.email(cust_info.email)
+							.mobile(cust_info.mobile)
+							.home(cust_info.home)
+							.build()
+
+
+Account[] accounts = new Account[cust_acct.size]
+cust.accounts= new ArrayList&lt;Account>()
+
+def i=0
+cust_acct.each{act ->
+					log.info act
+					cust.accounts.add( Account.builder()
+							.acctYear(act.acct_year)
+							.acctHash(act.acct_year)
+							.id(act.id)
+							.memberHash(act.member_hash)
+							.balance(act.balance)
+							.addressHash(act.address_hash)
+							.build())
+
+					
+					 
+}
+
+Address addr = Address.builder()
+									.id(cust_addr.id)
+									.streetNum(cust_addr.street_num)
+									.street(cust_addr.street)
+									.address2(cust_addr.address_2)
+									.city(cust_addr.city)
+									.state(cust_addr.state)
+									.zipCode(cust_addr.zip_code)
+									.county(cust_addr.county)
+									.country(cust_addr.country)
+									.build()
+log.info cust_trans.created_on.toLocalDate()
+log.info cust_info.birth_date.toLocalDate()
+									
+Transaction trn = Transaction.builder()
+									.id(cust_trans.id)
+									.acctHash(cust_trans.acct_hash)
+									.acctYear(cust_trans.acct_year)
+									.description(cust_trans.description)
+									.createdOn(cust_trans.created_on.toLocalDate())
+									.updatedOn(cust_trans.updated_on.toLocalDate())
+									.metadata(cust_trans.metadata)
+									.build()		
+cust.accounts[0].address = addr
+cust.accounts[0].transactions= new ArrayList&lt;Transaction>()
+cust.accounts[0].transactions.add(trn)					
+CustomerFlag custflag = CustomerFlag.builder()
+									.id(cust_flag.id)
+									.memberHash(cust_flag.member_hash)
+									.isVeteran(cust_flag.is_veteran)
+									.veteranYear(cust_flag.veteran_year)
+									.vip(cust_flag.vip)
+									.homeLoan(cust_flag.home_loan)
+									.carLoan(cust_flag.car_loan)
+									.smallBusinessAccount(cust_flag.small_business_account)
+									.build()
+
+cust.customerFlags = custflag
+//cust.accounts = accounts
+
+//groovy.sql.GroovyRowResult to JSON
+//def addressRecord =  testRunner.testCase.testSuite.project.addressRecord[0] 
+
+def response =  testRunner.testCase.getProperty("Response").value
+
+//Gson gson = new Gson();
+//Customer cust_response = gson.fromJson(response, Customer.class);
+ 
+JsonSlurper slurper = new JsonSlurper()
+        def object = slurper.parseText(response)
+  object.birthDate = LocalDate.parse(object.birthDate,'MM/dd/yyyy')
+	  // object.birthDate = LocalDate.parse('20/10/2011','dd/MM/yyyy')
+        Customer cust1 = new Customer(object)
+//employees.address = address
+
+//Gson gson = new Gson();
+//Address a1 = gson.fromJson(testRunner.testCase.testSuite.project.employeeRecord[0], Employee.class);
+ 
+log.info "Object From Response" + cust1
+log.info "Object From DB" + cust
+
+if (cust1 == cust)
+{
+	log.info true
+}
+else
+{
+	log.info false
+}
+</script></con:config></con:testStep><con:testStep type="groovy" name="Copy of BuildCustomerObjectFromJson" id="1e274518-1bd0-4795-95b6-7712466541f2"><con:settings/><con:config><script>import com.example.webfluxdemo.domain.Customer
+import com.example.webfluxdemo.domain.Transaction
+import com.example.webfluxdemo.domain.Account
+import com.example.webfluxdemo.domain.Address
+import com.example.webfluxdemo.domain.CustomerFlag
+import com.fasterxml.jackson.databind.ObjectMapper // version 2.11.1
+import com.fasterxml.jackson.annotation.JsonProperty // version 2.11.1
+import groovy.json.JsonOutput 
+import com.google.gson.Gson
+import groovy.json.JsonSlurper
+import java.time.LocalDate;
+//import com.google.gson.Gson
+
+def cust_info =  testRunner.testCase.testSuite.project.cust_info[0]
+def cust_flag =  testRunner.testCase.testSuite.project.cust_flag[0]
+def cust_trans = testRunner.testCase.testSuite.project.cust_trans[0]
+def cust_addr = testRunner.testCase.testSuite.project.cust_addr[0]
+def cust_acct = testRunner.testCase.testSuite.project.cust_acct
+
+Customer cust = Customer.builder()
+							.custCode(cust_info.cust_code)
+							.memberNo(cust_info.member_no)
+							.memberHash(cust_info.member_hash)
+							.firstName(cust_info.first_name)
+							.lastName(cust_info.last_name)
+						//	.birthDate(cust_info.birth_date.toLocalDate())
+							.deathDate((cust_info.death_date == null)?null : cust_info.death_date.toLocalDate())
+							.email(cust_info.email)
+							.mobile(cust_info.mobile)
+							.home(cust_info.home)
+							.build()
+
+
+Account[] accounts = new Account[cust_acct.size]
+cust.accounts= new ArrayList&lt;Account>()
+
+def i=0
+cust_acct.each{act ->
+
+					cust.accounts.add( Account.builder()
+							.acctYear(act.acct_year)
+							.acctHash(act.acct_hash)
+							.id(act.id)
+							.memberHash(act.member_hash)
+							.balance(act.balance)
+							.addressHash(act.address_hash)
+							.build())
+
+					
+					 
+}
+
+Address addr = Address.builder()
+									.id(cust_addr.id)
+									.streetNum(cust_addr.street_num)
+									.street(cust_addr.street)
+									//.address2(cust_addr.address_2)
+									.city(cust_addr.city)
+									.state(cust_addr.state)
+									.zipCode(cust_addr.zip_code)
+									.county(cust_addr.county)
+									.country(cust_addr.country)
+									.build()
+//log.info cust_trans.created_on.toLocalDate()
+//log.info cust_info.birth_date.toLocalDate()
+								
+Transaction trn = Transaction.builder()
+									.id(cust_trans.id)
+									.acctHash(cust_trans.acct_hash)
+									.acctYear(cust_trans.acct_year)
+									.description(cust_trans.description)
+									//.createdOn(cust_trans.created_on.toLocalDate())
+									//.updatedOn(cust_trans.updated_on.toLocalDate())
+									.metadata(cust_trans.metadata)
+									.build()		
+cust.accounts[0].address = addr
+cust.accounts[0].transactions= new ArrayList&lt;Transaction>()
+cust.accounts[0].transactions.add(trn)					
+CustomerFlag custflag = CustomerFlag.builder()
+									.id(cust_flag.id)
+									.memberHash(cust_flag.member_hash)
+									.isVeteran(cust_flag.is_veteran)
+									.veteranYear(cust_flag.veteran_year)
+									.vip(cust_flag.vip)
+									.homeLoan(cust_flag.home_loan)
+									.carLoan(cust_flag.car_loan)
+									.smallBusinessAccount(cust_flag.small_business_account)
+									.build()
+
+cust.customerFlags = custflag
+//cust.accounts = accounts
+
+//groovy.sql.GroovyRowResult to JSON
+//def addressRecord =  testRunner.testCase.testSuite.project.addressRecord[0] 
+
+def response =  testRunner.testCase.getProperty("Response").value
+
+Gson gson = new Gson();
+//Customer cust_response = gson.fromJson(response, Customer.class);
+ 
+JsonSlurper slurper = new JsonSlurper()
+        def object = slurper.parseText(response)
+//  object.birthDate = LocalDate.parse(object.birthDate,'MM/dd/yyyy')
+//  object.accounts[0].transactions[0].createdOn = LocalDate.parse(object.accounts[0].transactions[0].createdOn,'MM/dd/yyyy')
+//    object.accounts[0].transactions[0].updatedOn = LocalDate.parse(object.accounts[0].transactions[0].updatedOn,'MM/dd/yyyy')
+	  // object.birthDate = LocalDate.parse('20/10/2011','dd/MM/yyyy')
+        Customer cust1 = new Customer(object)
+//employees.address = address
+
+//Gson gson = new Gson();
+//Address a1 = gson.fromJson(testRunner.testCase.testSuite.project.employeeRecord[0], Employee.class);
+//cust1.accounts[0].transactions[0].updatedOn= null
+//cust1.accounts[0].transactions[0].createdOn= null
+//cust1.accounts[0].transactions[0].acct_Year="2006"
+log.info "Object From Response" + cust1
+log.info "Object From DB" + cust
+
+if (cust1 == cust)
+{
+	log.info true
+}
+else
+{
+	log.info false
+}
+
+log.info "logging json"
+log.info gson.toJson(cust) == gson.toJson(cust1)
+log.info "Object From Response" + gson.toJson(cust1)
+log.info "Object From DB" +gson.toJson(cust)
+
+//Using builder parttern  ignoring initializaion   t</script></con:config></con:testStep><con:properties><con:property><con:name>Response</con:name><con:value>{"custCode":1,"memberNo":"4027130073","memberHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","firstName":"Anatollo","lastName":"Kuhlen","email":"akuhlen0@epa.gov","mobile":"398-709-8500","home":"815-492-3856","customerFlags":{"id":1,"memberHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","veteranYear":"1996","vip":false,"homeLoan":false,"carLoan":false,"smallBusinessAccount":false,"veteran":true},"accounts":[{"acctYear":"2007","acctHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","id":1,"memberHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","balance":"113051.31","addressHash":"471ad4c4-56fd-4758-b76d-54760a821138","address":{"id":1,"streetNum":"19579","street":"Lerdahl","address2":null,"city":"Oakland","state":"CA","zipCode":"94622","county":"","country":"United States"},"transactions":[{"id":1,"acctHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","acctYear":"2007","description":"Labial frenotomy","metadata":null}]}],"deathDate":null}</con:value></con:property></con:properties></con:testCase><con:testCase id="93c1963f-fc1d-4e91-a0bf-6f24db00013a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="utils" searchProperties="true" disabled="true"><con:settings/><con:testStep type="groovy" name="ResponseValidation" id="c3575247-4ef3-43e6-b0fd-29573e9b3c74"><con:settings/><con:config><script>import groovy.sql.Sql
+import groovy.json.*
+import java.io.InputStream;   
+import java.util.Set;  
+  
+import com.fasterxml.jackson.databind.JsonNode;  
+import com.fasterxml.jackson.databind.ObjectMapper;  
+import com.networknt.schema.JsonSchema;  
+import com.networknt.schema.JsonSchemaFactory;  
+import com.networknt.schema.SpecVersion;  
+import com.networknt.schema.ValidationMessage;  
+
+
+class ResponseValidation {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+     // The constructor below is MANDATORY
+     def ResponseValidation(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+     def validateSchema(strResponseMessage, strSchemaPath)
+     {
+     	// create instance of the ObjectMapper class  
+ 		ObjectMapper objectMapper = new ObjectMapper();  
+          
+ 		// create an instance of the JsonSchemaFactory using version flag  
+ 		JsonSchemaFactory schemaFactory = JsonSchemaFactory.getInstance( SpecVersion.VersionFlag.V201909 ); 
+
+ 		//take response object
+		def response_message = strResponseMessage
+          
+		// store the JSON data in InputStream  
+		File initialFile = new File(strSchemaPath);
+
+ 		try(  
+               
+    			 InputStream schemaStream = new FileInputStream(initialFile);
+                
+   		 ){  
+
+            // read data from the stream and store it into JsonNode  
+            JsonNode json = objectMapper.readTree(response_message);  
+               
+              
+            // get schema from the schemaStream and store it into JsonSchema  
+            JsonSchema schema = schemaFactory.getSchema(schemaStream);  
+              
+            // create set of validation message and store result in it  
+            Set&lt;ValidationMessage> validationResult = schema.validate( json );  
+            
+             // show the validation errors   
+            if (validationResult.isEmpty()) {  
+
+                assert true
+              
+            } else {  
+                  
+                // show all the validation error  
+                validationResult.forEach(vm -> log.info(vm.getMessage())); 
+                assert false 
+            }  
+        }  
+
+     }
+}
+
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "ResponseValidation", new ResponseValidation(log, context, testRunner) )
+
+//testRunner.testCase.testSuite.project.metaClass.ResponseValidation = context.ResponseValidation
+</script></con:config></con:testStep><con:testStep type="groovy" name="DatabaseUtils" id="dd15ca05-c180-49a9-b891-90cee3e9f224"><con:settings/><con:config><script>import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "Database Util Init"
+class DatabaseUtils {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def DatabaseUtils(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+    def executeQuery( driver,strConnUrl,strConnUser, strConnPass,strQuery)
+    {
+    		//Register driver and instantiate connection object to be used by all test cases
+    		
+log.info "Executing Query " + strQuery
+		com.eviware.soapui.support.GroovyUtils.registerJdbcDriver(driver)
+		def sql = Sql.newInstance(strConnUrl, strConnUser, strConnPass, driver)
+		return sql.rows(strQuery)
+    }
+}
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "DatabaseUtils", new DatabaseUtils(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.DatabaseUtils = context.getProperty("DatabaseUtils")
+
+
+
+
+
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="LoadProperties" id="b97744a0-3639-4d2e-a581-84bb6a3350c7"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "File Reader Class Init"
+
+class FileReaderUtil {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def FileReaderUtil(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+def props = new Properties();
+	def loadProp(strFileName)
+	{
+		log.info "Load Properties"
+		//Read properties file to get connection parameters
+		
+		def propsFile = new File(strFileName);
+		propsFile.withInputStream {
+			 props.load(it)
+			 
+		}
+		return props
+	}
+	
+}
+
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "FileReaderUtil", new FileReaderUtil(log, context, testRunner) )
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="Account_Model" id="5ac3ed70-f2e6-4422-8a73-bc0cdefda574"><con:settings/><con:config><script><![CDATA[import com.example.webfluxdemo.domain.Transaction
+import com.example.webfluxdemo.domain.Account
+import com.example.webfluxdemo.domain.Address
+import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "Account Model Init"
+
+class Account_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def Account_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+
+	def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+	def url = testRunner.testCase.testSuite.getPropertyValue("url")
+	def user = testRunner.testCase.testSuite.getPropertyValue("user")
+	def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+	def accounts
+	Address objAddress
+
+
+    def buildAccountObjectFromDB(strMemberHash )
+    {
+
+     List<Transaction> acctTransactions = new ArrayList<Transaction>()
+	List<Account> listOfAccounts = new ArrayList<Account>()
+	
+	//List<Account> listOfAccounts = new ArrayList<Account>()
+	//Initialize Dependent Model Classes need to be removed
+	testRunner.testCase.testSuite.testCases["utils"].testSteps["DatabaseUtils"].run(testRunner,context)
+	testRunner.testCase.testSuite.testCases["utils"].testSteps["Transaction_Model"].run(testRunner,context)
+	testRunner.testCase.testSuite.testCases["utils"].testSteps["Address_Model"].run(testRunner,context)
+
+		
+		accounts = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"select * from cust_acct where member_hash = '"+strMemberHash+"'")
+	
+	//	address = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"select * from address where address_hash = '"+strAddressHash+"'")
+
+	
+//new Transaction_Model(log, context, testRunner).buildTransactionsObjectFromDB('e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b')
+//context.DatabaseUtils.executeQuery("","","", "","")
+
+		accounts.each{
+		
+			account->// log.info account
+			acctTransactions = testRunner.testCase.testSuite.project.Transaction_Model.buildTransactionsObjectFromDB(account.acct_hash)
+			objAddress = testRunner.testCase.testSuite.project.Address_Model.buildAddressObjectFromDB(account.address_hash)
+
+			listOfAccounts.add( Account.builder()
+							.acctYear(account.acct_year)
+							.acctHash(account.acct_hash)
+							.id(account.id)
+							.memberHash(account.member_hash)
+							.balance(account.balance)
+							.addressHash(account.address_hash)
+							.address(objAddress)
+							.transactions(acctTransactions)
+							.build())
+
+					
+					 
+			}
+			return listOfAccounts
+			
+		}
+
+		
+    }
+
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "Account_Model", new Account_Model(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.Account_Model = context.getProperty("Account_Model")
+
+log.info "After Account Model Class Init"
+
+//new Account_Model(log, context, testRunner).buildAccountObjectFromDB('e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b')
+]]></script></con:config></con:testStep><con:testStep type="groovy" name="Transaction_Model" id="1b357669-73cf-43f3-a0e8-140bc0ec0a65"><con:settings/><con:config><script>import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+import com.example.webfluxdemo.domain.Transaction
+
+log.info "Transaction Model Init"
+class Transaction_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def Transaction_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+	def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+	def url = testRunner.testCase.testSuite.getPropertyValue("url")
+	def user = testRunner.testCase.testSuite.getPropertyValue("user")
+	def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+	def transactions
+	
+    def buildTransactionsObjectFromDB(strAccountHash)
+    {
+    		List&lt;Transaction> acctTransactions = new ArrayList&lt;Transaction>()
+		testRunner.testCase.testSuite.testCases["utils"].testSteps["DatabaseUtils"].run(testRunner,context)
+		transactions = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"SELECT * FROM cust_trans WHERE acct_hash = '"+strAccountHash+"'")
+		//log.info "Transactions :   " + transactions
+
+		//List&lt;Transaction> acctTransactions = new ArrayList&lt;Transaction>()
+		Transaction trn
+		
+		transactions.each{
+			
+			transaction-> log.info transaction
+			//get transactions
+			trn = Transaction.builder()
+									.id(transaction.id)
+									.acctHash(transaction.acct_hash)
+									.acctYear(transaction.acct_year)
+									//.createdOn(transaction.created_on.toLocalDate())
+									.description(transaction.description)
+									.metadata(transaction.metadata)
+								.build()
+
+								log.info "trn   " + trn
+ 			acctTransactions.add(trn)
+									
+			/* acctTransactions.add( Transaction.builder()
+									.id(transaction.id)
+									.acctHash(transaction.acct_hash)
+									.acctYear(transaction.acct_year)
+									.createdOn(null)
+									.description(transaction.description)
+									.metadata(transaction.metadata)
+									.build()	)*/	
+			
+		}
+
+		return acctTransactions
+		
+    }
+
+    
+}
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "Transaction_Model", new Transaction_Model(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.Transaction_Model = context.getProperty("Transaction_Model")
+
+
+//new Transaction_Model(log, context, testRunner).buildTransactionsObjectFromDB('e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b')
+log.info "After Transaction Model Class Init"
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="Customer_Model" id="4e98f81c-37f0-490a-9423-6233f0f21612"><con:settings/><con:config><script>import groovy.sql.*
+import com.example.webfluxdemo.domain.CustomerFlag
+import com.example.webfluxdemo.domain.Account
+import com.example.webfluxdemo.domain.Customer
+import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "Customer Model Init"
+class Customer_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def Customer_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+
+	def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+	def url = testRunner.testCase.testSuite.getPropertyValue("url")
+	def user = testRunner.testCase.testSuite.getPropertyValue("user")
+	def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+	
+	//Customer objCustomer
+	CustomerFlag objCustomerFlag
+	List&lt;Account> objAccount = new ArrayList&lt;Account>()
+	
+
+
+    def buildCustomerObjectFromDB(strMemberNo )
+    {
+			//Initialize Dependent Model Classes need to be removed
+		testRunner.testCase.testSuite.testCases["utils"].testSteps["DatabaseUtils"].run(testRunner,context)
+		testRunner.testCase.testSuite.testCases["utils"].testSteps["Account_Model"].run(testRunner,context)
+		testRunner.testCase.testSuite.testCases["utils"].testSteps["CustomerFlag_Model"].run(testRunner,context)
+		
+		def custInfo = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"select * from cust_info where member_no='"+strMemberNo+"'")
+
+		
+		def objAccounts = testRunner.testCase.testSuite.project.Account_Model.buildAccountObjectFromDB(custInfo[0].member_hash)
+		log.info "bbj" + objAccounts
+		//log.info testRunner.testCase.testSuite.project.CustomerFlag_Model
+		def objCustomerFlags = testRunner.testCase.testSuite.project.CustomerFlag_Model.buildCustomerFlagFromDB(custInfo[0].member_hash)
+
+		Customer.builder()
+							.custCode(custInfo.cust_code)
+							.memberNo(custInfo.member_no)
+							.memberHash(custInfo.member_hash)
+							.firstName(custInfo.first_name)
+							.lastName(custInfo.last_name)
+							.email(custInfo.email)
+							.mobile(custInfo.mobile)
+							.home(custInfo.home)
+							.customerFlags(objCustomerFlags)
+							.accounts(objAccounts)
+							.build()
+	
+    }
+}
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "Customer_Model", new Customer_Model(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.Customer_Model = context.getProperty("Customer_Model")
+
+log.info "After Customer Model Init"
+
+//new Customer_Model(log, context, testRunner).buildCustomerObjectFromDB('4027130073')
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="Address_Model" id="66cfb058-244c-4e1e-81b8-e96e89bf2494"><con:settings/><con:config><script>import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+import com.example.webfluxdemo.domain.Address
+
+log.info "Address model Init"
+class Address_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def Address_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+
+	def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+	def url = testRunner.testCase.testSuite.getPropertyValue("url")
+	def user = testRunner.testCase.testSuite.getPropertyValue("user")
+	def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+	
+	Address objAddress
+	
+    def buildAddressObjectFromDB(strAddressHash)
+    {
+		testRunner.gotoStepByName("DatabaseUtils")
+		def address = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"SELECT * FROM address WHERE address_hash = '"+strAddressHash+"'")
+		log.info "Address :   " + address
+
+			  objAddress =  Address.builder()
+									.id(address.id)
+									.streetNum(address.street_num)
+									.street(address.street)
+									//.address2(cust_addr.address_2)
+									.city(address.city)
+									.state(address.state)
+									.zipCode(address.zip_code)
+									.county(address.county)
+									.country(address.country)
+									.build()
+			
+		}
+		
+    }
+
+    
+
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "Address_Model", new Address_Model(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.Address_Model = context.getProperty("Address_Model")
+
+log.info "After Address Model Init"
+</script></con:config></con:testStep><con:testStep type="groovy" name="CustomerFlag_Model" id="6a97d3df-2121-401d-9c09-7ff55379b3d6"><con:settings/><con:config><script> import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+import com.example.webfluxdemo.domain.CustomerFlag
+
+log.info "CustomerFlag_Model Init"
+class CustomerFlag_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def CustomerFlag_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+	def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+	def url = testRunner.testCase.testSuite.getPropertyValue("url")
+	def user = testRunner.testCase.testSuite.getPropertyValue("user")
+	def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+
+	
+    def buildCustomerFlagFromDB(strMemberHash)
+    {
+		
+		testRunner.testCase.testSuite.testCases["utils"].testSteps["DatabaseUtils"].run(testRunner,context)
+		
+		def customerFlags = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"SELECT * FROM cust_flag WHERE member_hash = '"+strMemberHash+"'")
+		//log.info "Customer Flags :   " + customerFlags
+
+		CustomerFlag objCustflag = CustomerFlag.builder()
+									.id(customerFlags.id)
+									.memberHash(customerFlags.member_hash)
+									.isVeteran(customerFlags.is_veteran)
+									.veteranYear(customerFlags.veteran_year)
+									.vip(customerFlags.vip)
+									.homeLoan(customerFlags.home_loan)
+									.carLoan(customerFlags.car_loan)
+									.smallBusinessAccount(customerFlags.small_business_account)
+									.build()
+	
+		
+    }
+
+    
+}
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "CustomerFlag_Model", new CustomerFlag_Model(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.CustomerFlag_Model  = context.getProperty("CustomerFlag_Model")
+
+log.info "After Customer Flag Class"
+
+
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="5c72fb9a-5ce9-41d5-970a-4bd9be1464a1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Copy of utils" searchProperties="true" disabled="true"><con:settings/><con:testStep type="groovy" name="ResponseValidation" id="bd63aa4c-a6cf-4797-83ab-cc8c822580b9"><con:settings/><con:config><script>import groovy.sql.Sql
+import groovy.json.*
+import java.io.InputStream;   
+import java.util.Set;  
+  
+import com.fasterxml.jackson.databind.JsonNode;  
+import com.fasterxml.jackson.databind.ObjectMapper;  
+import com.networknt.schema.JsonSchema;  
+import com.networknt.schema.JsonSchemaFactory;  
+import com.networknt.schema.SpecVersion;  
+import com.networknt.schema.ValidationMessage;  
+
+
+class ResponseValidation {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+     // The constructor below is MANDATORY
+     def ResponseValidation(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+     def validateSchema(strResponseMessage, strSchemaPath)
+     {
+     	// create instance of the ObjectMapper class  
+ 		ObjectMapper objectMapper = new ObjectMapper();  
+          
+ 		// create an instance of the JsonSchemaFactory using version flag  
+ 		JsonSchemaFactory schemaFactory = JsonSchemaFactory.getInstance( SpecVersion.VersionFlag.V201909 ); 
+
+ 		//take response object
+		def response_message = strResponseMessage
+          
+		// store the JSON data in InputStream  
+		File initialFile = new File(strSchemaPath);
+
+ 		try(  
+               
+    			 InputStream schemaStream = new FileInputStream(initialFile);
+                
+   		 ){  
+
+            // read data from the stream and store it into JsonNode  
+            JsonNode json = objectMapper.readTree(response_message);  
+               
+              
+            // get schema from the schemaStream and store it into JsonSchema  
+            JsonSchema schema = schemaFactory.getSchema(schemaStream);  
+              
+            // create set of validation message and store result in it  
+            Set&lt;ValidationMessage> validationResult = schema.validate( json );  
+            
+             // show the validation errors   
+            if (validationResult.isEmpty()) {  
+
+                assert true
+              
+            } else {  
+                  
+                // show all the validation error  
+                validationResult.forEach(vm -> log.info(vm.getMessage())); 
+                assert false 
+            }  
+        }  
+
+     }
+}
+
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "ResponseValidation", new ResponseValidation(log, context, testRunner) )
+
+//testRunner.testCase.testSuite.project.metaClass.ResponseValidation = context.ResponseValidation
+</script></con:config></con:testStep><con:testStep type="groovy" name="DatabaseUtils" id="367b8e20-fe9e-4278-872d-32830c17263a"><con:settings/><con:config><script>import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "Database Util Init"
+class DatabaseUtils {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def DatabaseUtils(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+    def executeQuery( driver,strConnUrl,strConnUser, strConnPass,strQuery)
+    {
+    		//Register driver and instantiate connection object to be used by all test cases
+    		
+log.info "Executing Query " + strQuery
+		com.eviware.soapui.support.GroovyUtils.registerJdbcDriver(driver)
+		def sql = Sql.newInstance(strConnUrl, strConnUser, strConnPass, driver)
+		return sql.rows(strQuery)
+    }
+}
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "DatabaseUtils", new DatabaseUtils(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.DatabaseUtils = context.getProperty("DatabaseUtils")
+
+
+
+
+
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="LoadProperties" id="338e8476-b514-4deb-a9ca-7b751f6cf337"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "File Reader Class Init"
+
+class FileReaderUtil {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def FileReaderUtil(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+def props = new Properties();
+	def loadProp(strFileName)
+	{
+		log.info "Load Properties"
+		//Read properties file to get connection parameters
+		
+		def propsFile = new File(strFileName);
+		propsFile.withInputStream {
+			 props.load(it)
+			 
+		}
+		return props
+	}
+	
+}
+
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "FileReaderUtil", new FileReaderUtil(log, context, testRunner) )
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="Account_Model" id="77747b32-c3d0-4a7e-a359-3e1c11228b9b"><con:settings/><con:config><script>import com.example.webfluxdemo.domain.Transaction
+import com.example.webfluxdemo.domain.Account
+import com.example.webfluxdemo.domain.Address
+import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "Preparing connection"
+
+class Account_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def Account_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+
+	def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+	def url = testRunner.testCase.testSuite.getPropertyValue("url")
+	def user = testRunner.testCase.testSuite.getPropertyValue("user")
+	def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+	def accounts
+	Address objAddress
+
+	List&lt;Transaction> acctTransactions = new ArrayList&lt;Transaction>()
+	List&lt;Account> listOfAccounts = new ArrayList&lt;Account>()
+	
+    def buildAccountObjectFromDB(strMemberHash )
+    {
+
+  		
+	
+	//Initialize Dependent Model Classes need to be removed
+	testRunner.testCase.testSuite.testCases["utils"].testSteps["DatabaseUtils"].run(testRunner,context)
+	testRunner.testCase.testSuite.testCases["utils"].testSteps["Transaction_Model"].run(testRunner,context)
+	testRunner.testCase.testSuite.testCases["utils"].testSteps["Address_Model"].run(testRunner,context)
+
+		
+		accounts = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"select * from cust_acct where member_hash = '"+strMemberHash+"'")
+	
+	//	address = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"select * from address where address_hash = '"+strAddressHash+"'")
+
+	
+//new Transaction_Model(log, context, testRunner).buildTransactionsObjectFromDB('e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b')
+//context.DatabaseUtils.executeQuery("","","", "","")
+
+		accounts.each{
+		
+			account-> log.info account
+			//acctTransactions = testRunner.testCase.testSuite.project.Transaction_Model.buildTransactionsObjectFromDB('e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b')
+			//objAddress = testRunner.testCase.testSuite.project.Address_Model.buildAddressObjectFromDB('471ad4c4-56fd-4758-b76d-54760a821138')
+			acctTransactions = testRunner.testCase.testSuite.project.Transaction_Model.buildTransactionsObjectFromDB(account.acct_hash)
+			objAddress = testRunner.testCase.testSuite.project.Address_Model.buildAddressObjectFromDB(account.address_hash)
+			//objAddress = context.Address_Model.buildAddressObjectFromDB(account.address_hash)
+			listOfAccounts.add( Account.builder()
+							.acctYear(account.acct_year)
+							.acctHash(account.acct_hash)
+							.id(account.id)
+							.memberHash(account.member_hash)
+							.balance(account.balance)
+							.addressHash(account.address_hash)
+							.address(objAddress)
+							.transactions(acctTransactions)
+							.build())
+
+					
+					 
+			}
+			
+			//get transactions	
+			
+		}
+		
+    }
+
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "Account_Model", new Account_Model(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.Account_Model = context.getProperty("Account_Model")
+
+
+//log.info testRunner.testCase.testSuite.project.Account_Model.buildAccountObjectFromDB('e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b')
+
+//new Account_Model(log, context, testRunner).buildAccountObjectFromDB('e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b')
+//context.DatabaseUtils.executeQuery("","","", "","")
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="Transaction_Model" id="190d1dc4-7a24-4c97-ada6-122d07f459f2"><con:settings/><con:config><script>import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+import com.example.webfluxdemo.domain.Transaction
+
+log.info "Transaction Model Init"
+class Transaction_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def Transaction_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+
+	def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+	def url = testRunner.testCase.testSuite.getPropertyValue("url")
+	def user = testRunner.testCase.testSuite.getPropertyValue("user")
+	def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+	def transactions
+	
+    def buildTransactionsObjectFromDB(strAccountHash)
+    {
+		testRunner.gotoStepByName("DatabaseUtils")
+		transactions = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"SELECT * FROM cust_trans WHERE acct_hash = '"+strAccountHash+"'")
+		log.info "Transactions :   " + transactions
+
+		List&lt;Transaction> acctTransactions = new ArrayList&lt;Transaction>()
+		
+		transactions.each{
+			
+			transaction-> log.info transaction
+			//get transactions
+			 acctTransactions.add( Transaction.builder()
+									.id(transaction.id)
+									.acctHash(transaction.acct_hash)
+									.acctYear(transaction.acct_year)
+									.description(transaction.description)
+									//.createdOn(transaction.created_on.toLocalDate())
+									//.updatedOn(transaction.updated_on.toLocalDate())
+									.metadata(transaction.metadata)
+									.build()	)	
+			
+		}
+		
+    }
+
+    
+}
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "Transaction_Model", new Transaction_Model(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.Transaction_Model = context.getProperty("Transaction_Model")
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="Customer_Model" id="fc8b5f7d-53f5-4e39-a853-3e30f530810c"><con:settings/><con:config><script>import groovy.sql.*
+import com.example.webfluxdemo.domain.CustomerFlag
+import com.example.webfluxdemo.domain.Account
+import com.example.webfluxdemo.domain.Customer
+import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "Customer Model Init"
+class Customer_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def Customer_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+
+	def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+	def url = testRunner.testCase.testSuite.getPropertyValue("url")
+	def user = testRunner.testCase.testSuite.getPropertyValue("user")
+	def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+	
+	//Customer objCustomer
+	CustomerFlag objCustomerFlag
+	List&lt;Account> objAccount = new ArrayList&lt;Account>()
+	
+
+
+    def buildCustomerObjectFromDB(strMemberNo )
+    {
+			//Initialize Dependent Model Classes need to be removed
+		testRunner.testCase.testSuite.testCases["utils"].testSteps["DatabaseUtils"].run(testRunner,context)
+		testRunner.testCase.testSuite.testCases["utils"].testSteps["Account_Model"].run(testRunner,context)
+		testRunner.testCase.testSuite.testCases["utils"].testSteps["CustomerFlag_Model"].run(testRunner,context)
+		
+		def custInfo = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"select * from cust_info where member_no='"+strMemberNo+"'")
+
+		
+		def objAccounts = testRunner.testCase.testSuite.project.Account_Model.buildAccountObjectFromDB(custInfo[0].member_hash)
+		log.info objAccounts
+		//log.info testRunner.testCase.testSuite.project.CustomerFlag_Model
+		def objCustomerFlags = testRunner.testCase.testSuite.project.CustomerFlag_Model.buildCustomerFlagFromDB(custInfo[0].member_hash)
+
+		Customer.builder()
+							.custCode(custInfo.cust_code)
+							.memberNo(custInfo.member_no)
+							.memberHash(custInfo.member_hash)
+							.firstName(custInfo.first_name)
+							.lastName(custInfo.last_name)
+							.email(custInfo.email)
+							.mobile(custInfo.mobile)
+							.home(custInfo.home)
+							.customerFlags(objCustomerFlags)
+	//						.accounts(objAccounts)
+							.build()
+	
+    }
+}
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "Customer_Model", new Customer_Model(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.Customer_Model = context.getProperty("Customer_Model")
+testRunner.testCase.testSuite.project.Customer_Model.buildCustomerObjectFromDB('4027130073')
+
+
+
+log.info testRunner.testCase.testSuite.project.Customer_Model.listOfAccounts
+</script></con:config></con:testStep><con:testStep type="groovy" name="Address_Model" id="8868a720-7c53-4646-a520-4aa637d2c283"><con:settings/><con:config><script>import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+import com.example.webfluxdemo.domain.Address
+
+log.info "Address model Init"
+class Address_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def Address_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+
+	def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+	def url = testRunner.testCase.testSuite.getPropertyValue("url")
+	def user = testRunner.testCase.testSuite.getPropertyValue("user")
+	def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+	
+	Address objAddress
+	
+    def buildAddressObjectFromDB(strAddressHash)
+    {
+		testRunner.gotoStepByName("DatabaseUtils")
+		def address = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"SELECT * FROM address WHERE address_hash = '"+strAddressHash+"'")
+		log.info "Address :   " + address
+
+			  objAddress =  Address.builder()
+									.id(address.id)
+									.streetNum(address.street_num)
+									.street(address.street)
+									//.address2(cust_addr.address_2)
+									.city(address.city)
+									.state(address.state)
+									.zipCode(address.zip_code)
+									.county(address.county)
+									.country(address.country)
+									.build()
+			
+		}
+		
+    }
+
+    
+
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "Address_Model", new Address_Model(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.Address_Model = context.getProperty("Address_Model")
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="CustomerFlag_Model" id="6246fd4e-18f6-41ce-a1a6-cbc782e5690e"><con:settings/><con:config><script>import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+import com.example.webfluxdemo.domain.CustomerFlag
+
+log.info "CustomerFlag_Model Init"
+class CustomerFlag_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def CustomerFlag_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+	def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+	def url = testRunner.testCase.testSuite.getPropertyValue("url")
+	def user = testRunner.testCase.testSuite.getPropertyValue("user")
+	def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+
+	
+    def buildCustomerFlagFromDB(strMemberHash)
+    {
+		
+		testRunner.testCase.testSuite.testCases["utils"].testSteps["DatabaseUtils"].run(testRunner,context)
+		
+		def customerFlags = testRunner.testCase.testSuite.project.DatabaseUtils.executeQuery( driver,url,user, pass,"SELECT * FROM cust_flag WHERE member_hash = '"+strMemberHash+"'")
+		//log.info "Customer Flags :   " + customerFlags
+
+		CustomerFlag objCustflag = CustomerFlag.builder()
+									.id(customerFlags.id)
+									.memberHash(customerFlags.member_hash)
+									.isVeteran(customerFlags.is_veteran)
+									.veteranYear(customerFlags.veteran_year)
+									.vip(customerFlags.vip)
+									.homeLoan(customerFlags.home_loan)
+									.carLoan(customerFlags.car_loan)
+									.smallBusinessAccount(customerFlags.small_business_account)
+									.build()
+	
+		
+    }
+
+    
+}
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "CustomerFlag_Model", new CustomerFlag_Model(log, context, testRunner) )
+testRunner.testCase.testSuite.project.metaClass.CustomerFlag_Model  = context.getProperty("CustomerFlag_Model")
+
+log.info "After Customer Flag"
+
+
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2013d25b-913c-4671-9fa2-3ead2eeab1f9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Test Case - Dynamic Data Validate" searchProperties="true"><con:settings/><con:testStep type="groovy" name="InitializeHelpers" id="8c136448-40e2-4ce3-9270-6d764fbad384"><con:settings/><con:config><script>//Instantiate ResponseValidation class
+
+def currentProject = testRunner.testCase.testSuite.project
+currentProject
+    .testSuites["TestSuite"]
+       .testCases["utils"]
+          .testSteps["ResponseValidation"]
+             .run(testRunner, context)
+
+
+currentProject.metaClass.ResponseValidation = context.ResponseValidation
+
+//Load Properties</script></con:config></con:testStep><con:testStep type="groovy" name="LoadProperty" id="3d179971-0a38-4ae6-b798-b116ab774156"><con:settings/><con:config><script>
+log.info "Load Project Properties" + testRunner.testCase.testSuite.project.getPath()
+
+//Get Project Property
+log.info  testRunner.testCase.testSuite.project.getPath().split("\\\\").length
+//def pathname = testRunner.testCase.testSuite.project.getPath()
+def pathname = context.expand('${#Project#FilePath}')
+def projectScriptPath =  pathname.take(pathname.lastIndexOf("\\"))
+def projectPath =  projectScriptPath.take(projectScriptPath.lastIndexOf("\\"))
+
+//Set Global Suite Properties to access Test Automation Folder Structure assets
+testRunner.testCase.testSuite.setPropertyValue("ProjectPath", projectPath)
+testRunner.testCase.testSuite.setPropertyValue("ProjectScriptPath", projectScriptPath)
+testRunner.testCase.testSuite.setPropertyValue("ProjectDataPath", projectPath.concat("\\data"))
+testRunner.testCase.testSuite.setPropertyValue("ProjectSchemaPath", projectPath.concat("\\schema"))
+
+log.info testRunner.testCase.testSuite.project.getPath()
+
+ def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
+ def projectDir = groovyUtils.projectPath 
+
+ log.info "proj dr" + context.expand('${#Project#FilePath}')</script></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="eecb51c3-157e-410a-aee1-38f3e47e91f9" disabled="true"><con:settings/><con:config><script>//Instantiate verifier class
+def suite = testRunner.testCase.testSuite
+
+suite.testCases["utils"].testSteps["Customer_Model"].run(testRunner, context)
+
+context.Customer_Model.buildCustomerObjectFromDB('4027130073')
+
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="getCustomer" id="995de14f-1056-453c-9ed0-57da1b430891"><con:settings/><con:config service="http://localhost:8090" resourcePath="/v1/getCustomer/{memberNo}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getCustomer" id="ea4a63eb-6205-407e-b65f-0c094885c14a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request/><con:originalUri>http://localhost/v1/getCustomer/4788331624</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="a10696f7-c10a-4c8e-9cc6-530b654cb72f" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="9f5b0c4f-5b88-4289-99b4-9c062b783e3d" name="Script - KeyChecker"><con:configuration><scriptText>//dale
+//Groovy Script to verify all information headers of request are present as expected
+
+//take response object
+def response_message = messageExchange.responseContent
+
+//convert response object into json
+def response_json = new groovy.json.JsonSlurper().parseText(response_message)
+
+//create variable containing all the json keys returned
+def json_key = response_json.keySet()
+
+//Create new array of Json keys that SHOULD be returned in a request. Edit this depending on the script being tested
+def json_keycheck = ["custCode","memberNo","memberHash","firstName","lastName",
+"deathDate","email","mobile","customerFlags","accounts"]
+
+assert true
+
+//loop used to verify all headers are accurately present in response body. Will return error if headers are missing
+for (def i=0;i&lt;json_keycheck.size();i++){
+	for (def j=0;json_key.size()+1;j++){
+		if (j == json_key.size()+1){
+			log.info("request header missing: ${json_keycheck[i]}")//if response message is missing key, will tell which one here
+			assert false
+		}else if (json_keycheck[i] == json_key[j]){
+			break
+		}
+	}
+}
+
+log.info("Request Completed Successfully")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="d5c44603-205e-40dd-be73-60b0726ce673" name="Schema Validation"><con:configuration><scriptText>import java.io.InputStream;   
+import java.util.Set;  
+  
+import com.fasterxml.jackson.databind.JsonNode;  
+import com.fasterxml.jackson.databind.ObjectMapper;  
+import com.networknt.schema.JsonSchema;  
+import com.networknt.schema.JsonSchemaFactory;  
+import com.networknt.schema.SpecVersion;  
+import com.networknt.schema.ValidationMessage;  
+
+// create instance of the ObjectMapper class  
+ ObjectMapper objectMapper = new ObjectMapper();  
+          
+ // create an instance of the JsonSchemaFactory using version flag  
+ JsonSchemaFactory schemaFactory = JsonSchemaFactory.getInstance( SpecVersion.VersionFlag.V201909 ); 
+
+ //take response object
+def response_message = messageExchange.responseContent
+          
+// store the JSON data in InputStream  
+File initialFile = new File(context.testCase.testSuite.getProperty("ProjectSchemaPath").value + "\\customer_modified.txt");
+ try(  
+               
+    			 InputStream schemaStream = new FileInputStream(initialFile);
+                
+    ){  
+
+            // read data from the stream and store it into JsonNode  
+            JsonNode json = objectMapper.readTree(response_message);  
+               
+              
+            // get schema from the schemaStream and store it into JsonSchema  
+            JsonSchema schema = schemaFactory.getSchema(schemaStream);  
+              
+            // create set of validation message and store result in it  
+            Set&lt;ValidationMessage> validationResult = schema.validate( json );  
+            
+             // show the validation errors   
+            if (validationResult.isEmpty()) {  
+
+                assert true
+              
+            } else {  
+                  
+                // show all the validation error  
+                validationResult.forEach(vm -> log.info(vm.getMessage())); 
+                assert false 
+            }  
+        }  
+  </scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="25212137-7e63-4661-8ca5-d97dcb12b300" name="SchemaValidation - Reusable"><con:configuration><scriptText>
+context.testCase.testSuite.project.ResponseValidation.validateSchema(messageExchange.responseContent,context.testCase.testSuite.getProperty("ProjectSchemaPath").value + "\\customer_modified.txt")
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="memberNo" value="${#TestSuite#memberNumber}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Write API Response" id="ecadb17b-dbb2-4eea-bdee-e712a202e1aa"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>response</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>getCustomer</con:sourceStep><con:targetType>response</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:targetPath/><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="Validate Resuts With DB Values" id="33ef2794-1d82-42bf-bd1c-2a1323dcc269"><con:settings/><con:config><script>import com.example.webfluxdemo.domain.Customer
+import com.example.webfluxdemo.domain.Transaction
+import com.example.webfluxdemo.domain.Account
+import com.example.webfluxdemo.domain.Address
+import com.example.webfluxdemo.domain.CustomerFlag
+import com.example.webfluxdemo.domain.LocalDateTypeAdapter
+import com.fasterxml.jackson.databind.ObjectMapper // version 2.11.1
+import com.fasterxml.jackson.annotation.JsonProperty // version 2.11.1
+import groovy.json.JsonOutput 
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import groovy.json.JsonSlurper
+import java.time.LocalDate
+
+
+//Instantiate verifier class
+def suite = testRunner.testCase.testSuite
+suite.testCases["utils"].testSteps["Customer_Model"].run(testRunner, context)
+
+//Execute Utility method
+
+Customer objCustomerFromDB = context.Customer_Model.buildCustomerObjectFromDB('4027130073')
+
+def response =  testRunner.testCase.getProperty("Response").value
+
+
+ 
+JsonSlurper slurper = new JsonSlurper()
+        def object = slurper.parseText(response)
+        Customer objCustomerResponse = new Customer(object)
+
+log.info "Object From Response" + objCustomerResponse
+log.info "Object From DB" + objCustomerFromDB
+
+if (objCustomerResponse == objCustomerFromDB)
+{
+	log.info true
+}
+else
+{
+	log.info false
+}
+
+log.info "logging json"
+//Gson gson = new Gson();
+
+Gson gson = new GsonBuilder()
+    .registerTypeAdapter(LocalDate.class, new LocalDateTypeAdapter())
+    .create();
+    
+if(gson.toJson(objCustomerResponse,Customer.class) == gson.toJson(objCustomerFromDB,Customer.class))
+{
+	
+	log.info "Results matach values from Database"
+}
+else{
+	 testRunner.fail()
+}
+
+
+
+
+log.info "Object From Response" + gson.toJson(objCustomerResponse,Customer.class)
+log.info "Object From DB" +gson.toJson(objCustomerFromDB,Customer.class)
+
+//Using builder parttern  ignoring initializaion   t
+
+
+</script></con:config></con:testStep><con:properties><con:property><con:name>response</con:name><con:value>{"custCode":1,"memberNo":"4027130073","memberHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","firstName":"Anatollo","lastName":"Kuhlen","email":"akuhlen0@epa.gov","mobile":"398-709-8500","home":"815-492-3856","customerFlags":{"id":1,"memberHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","veteranYear":"1996","vip":false,"homeLoan":false,"carLoan":false,"smallBusinessAccount":false,"veteran":true},"accounts":[{"acctYear":"2007","acctHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","id":1,"memberHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","balance":"113051.31","addressHash":"471ad4c4-56fd-4758-b76d-54760a821138","address":{"id":1,"streetNum":"19579","street":"Lerdahl","address2":null,"city":"Oakland","state":"CA","zipCode":"94622","county":"","country":"United States"},"transactions":[{"id":1,"acctHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","acctYear":"2007","description":"Labial frenotomy","metadata":null}]}],"deathDate":null}</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>inputFile</con:name><con:value>C:\Users\dfairfield\Documents\memberNumbersFail011922.csv</con:value></con:property><con:property><con:name>memberNumber</con:name><con:value>4027130073</con:value></con:property><con:property><con:name>dataDrivenInputFile</con:name><con:value>C:\Users\dfairfield\Documents\DDpostgres2-23-22.csv</con:value></con:property><con:property><con:name>DDTestInputFile</con:name><con:value>C:\Users\dfairfield\Documents\ddtest.csv</con:value></con:property><con:property><con:name>fullRecord</con:name><con:value>2,4,4788331624,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,Glendon,Rippingale,4/22/1998,,grippingale1@nsw.gov.au,321-780-4964,858-843-4015,2,6fecd73a-f29c-4f0b-8be1-db3703aa5776,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,2007,2,6fecd73a-f29c-4f0b-8be1-db3703aa5776,8621,Del Sol,9,Santa Barbara,CA,93111,,United States,2,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,FALSE,1994,FALSE,TRUE,FALSE,TRUE,2,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,2007,274725.35,8a6ebe38-4d25-43aa-a93d-548999b34cd0,2,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,2007,Abdomen wall repair NEC,11/17/1970,8/1/2021,</con:value></con:property><con:property><con:name>memberNumbersArr</con:name><con:value>"1001077768","4218872937","6307244763","2575945453","3069754961"</con:value></con:property><con:property><con:name>ProjectScriptPath</con:name><con:value>C:\srajan\IRS\TestAutomation\soapui\tis_automation\scripts</con:value></con:property><con:property><con:name>ProjectDataPath</con:name><con:value>C:\srajan\IRS\TestAutomation\soapui\tis_automation\data</con:value></con:property><con:property><con:name>password</con:name><con:value>sharajan</con:value></con:property><con:property><con:name>driver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>user</con:name><con:value>sharajan</con:value></con:property><con:property><con:name>url</con:name><con:value>jdbc:postgresql://localhost:5432/postgres</con:value></con:property><con:property><con:name>ProjectSchemaPath</con:name><con:value>C:\srajan\IRS\TestAutomation\soapui\tis_automation\schema</con:value></con:property><con:property><con:name>ProjectPath</con:name><con:value>C:\srajan\IRS\TestAutomation\soapui\tis_automation</con:value></con:property><con:property><con:name>FilePath</con:name><con:value>test</con:value></con:property></con:properties></con:testSuite><con:testSuite id="ee428905-4500-45ac-9bf2-7d2dbebe885c" name="TestSuite_1" disabled="true"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="c670ffdb-d15b-44d6-b307-542b50e5916b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase Happy Path" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="getCustomerHash" id="2d03e02f-59bb-4093-b124-3ad753a227b4" disabled="true"><con:settings/><con:config service="http://localhost:8090" resourcePath="/v1/customer/{memberNo}/hash" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getCustomerHash" id="a6831a14-95e0-40f8-8532-f98883a9a1b5" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request/><con:originalUri>http://localhost/v1/getCustomerHash/4788331624</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="47f66824-5b5b-45ae-86e5-25c65f2ea202" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="2b4da229-5497-4792-b8fb-08640142122e" name="Script Assertion"><con:configuration><scriptText>def response_message = messageExchange.response.responseContent
+log.info(response_message)
+//if (response_message.length() > 0){
+//	assert true
+//} else {
+//	log.info("No response hash returned")	
+//	assert false
+//}
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="memberNo" value="${#TestSuite#memberNumber}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>memberNo</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="InitializeHelpers" id="d8331be1-6eca-4593-a299-46bfd14dd12e"><con:settings/><con:config><script>//Instantiate ResponseValidation class
+
+def currentProject = testRunner.testCase.testSuite.project
+currentProject
+    .testSuites["TestSuite"]
+       .testCases["utils"]
+          .testSteps["ResponseValidation"]
+             .run(testRunner, context)
+
+
+currentProject.metaClass.ResponseValidation = context.ResponseValidation
+
+//Load Properties</script></con:config></con:testStep><con:testStep type="groovy" name="LoadProperty" id="b3c2b388-0ac8-4654-8cd9-90090008c66d"><con:settings/><con:config><script>
+log.info "File Reader Class Init"
+
+//Get Project Property
+log.info  testRunner.testCase.testSuite.project.getPath().split("\\\\").length
+def pathname = testRunner.testCase.testSuite.project.getPath()
+def projectScriptPath =  pathname.take(pathname.lastIndexOf("\\"))
+def projectPath =  projectScriptPath.take(projectScriptPath.lastIndexOf("\\"))
+
+//Set Global Suite Properties to access Test Automation Folder Structure assets
+testRunner.testCase.testSuite.setPropertyValue("ProjectPath", projectPath)
+testRunner.testCase.testSuite.setPropertyValue("ProjectScriptPath", projectScriptPath)
+testRunner.testCase.testSuite.setPropertyValue("ProjectDataPath", projectPath.concat("\\data"))
+
+log.info testRunner.testCase.testSuite.getProperty("ProjectDataPath").value
+</script></con:config></con:testStep><con:testStep type="groovy" name="Set Connection Properties" id="b786e1ce-5d0c-47b1-865f-8b3203d2dec7"><con:settings/><con:config><script>import com.eviware.soapui.support.*;
+
+//Execute DB Validation (Method Calls to the DBVerify in the DBVerification_Updated 
+def fileName = "connection.properties"
+def filePath = testRunner.testCase.testSuite.getPropertyValue("ProjectDataPath").concat("\\").concat(fileName)
+//def filePath = "C:/srajan/IRS/TestAutomation/soapui/Sam/connection.properties"
+def testSuite = testRunner.testCase.testSuite.getName()
+
+// Load ExpectedValues for DB Validation
+def currentProject = testRunner.testCase.testSuite.project
+currentProject
+    .testSuites."TestSuite"
+       .testCases["utils"]
+          .testSteps["LoadProperties"]
+             .run(testRunner, context)
+
+context.FileReaderUtil.loadProp(filePath).each{
+	testRunner.testCase.testSuite.setPropertyValue( it.key, it.value)
+}
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="GetCustomerFromDB" id="cec9faa5-c007-4234-ae7f-65823911f772"><con:settings/><con:config><script>import com.example.webfluxdemo.domain.Customer
+import com.fasterxml.jackson.databind.ObjectMapper 
+import com.fasterxml.jackson.annotation.JsonProperty 
+import groovy.json.JsonOutput 
+import com.google.gson.Gson
+
+
+def currentProject = testRunner.testCase.testSuite.project
+currentProject
+    .testSuites."TestSuite"
+       .testCases["utils"]
+          .testSteps["DatabaseUtils"]
+             .run(testRunner, context)
+
+def driver = testRunner.testCase.testSuite.getPropertyValue("driver")
+def url = testRunner.testCase.testSuite.getPropertyValue("url")
+def user = testRunner.testCase.testSuite.getPropertyValue("user")
+def pass = testRunner.testCase.testSuite.getPropertyValue("password")
+
+def query = "select * from cust_info where member_no= '4027130073'"
+def rows = context.DatabaseUtils.executeQuery( driver,url,user, pass,query)
+def member_hash =  rows[0].member_hash
+log.info rows
+
+currentProject.metaClass.cust_info = rows
+
+query = "SELECT * FROM cust_acct WHERE member_hash = '"+member_hash+"'"
+rows = context.DatabaseUtils.executeQuery( driver,url,user, pass,query)
+currentProject.metaClass.cust_acct = rows
+def address_hash = rows[0].address_hash
+
+query = "SELECT * FROM cust_trans WHERE acct_hash = '"+member_hash+"'"
+rows = context.DatabaseUtils.executeQuery( driver,url,user, pass,query)
+currentProject.metaClass.cust_trans = rows
+
+
+query = "SELECT * FROM address WHERE address_hash = '"+address_hash+"'"
+rows = context.DatabaseUtils.executeQuery( driver,url,user, pass,query)
+currentProject.metaClass.cust_addr = rows
+
+query = "SELECT * FROM cust_flag WHERE member_hash = '"+member_hash+"'"
+rows = context.DatabaseUtils.executeQuery( driver,url,user, pass,query)
+currentProject.metaClass.cust_flag = rows
+
+//log.info rows.size</script></con:config></con:testStep><con:testStep type="restrequest" name="getCustomer" id="25a150e4-318b-4688-96da-60a5303353e4"><con:settings/><con:config service="http://localhost:8090" resourcePath="/v1/getCustomer/{memberNo}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getCustomer" id="ea4a63eb-6205-407e-b65f-0c094885c14a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8090</con:endpoint><con:request/><con:originalUri>http://localhost/v1/getCustomer/4788331624</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="a10696f7-c10a-4c8e-9cc6-530b654cb72f" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="9f5b0c4f-5b88-4289-99b4-9c062b783e3d" name="Script - KeyChecker"><con:configuration><scriptText>//dale
+//Groovy Script to verify all information headers of request are present as expected
+
+//take response object
+def response_message = messageExchange.responseContent
+
+//convert response object into json
+def response_json = new groovy.json.JsonSlurper().parseText(response_message)
+
+//create variable containing all the json keys returned
+def json_key = response_json.keySet()
+
+//Create new array of Json keys that SHOULD be returned in a request. Edit this depending on the script being tested
+def json_keycheck = ["custCode","memberNo","memberHash","firstName","lastName","birthDate",
+"deathDate","email","mobile","customerFlags","accounts"]
+
+assert true
+
+//loop used to verify all headers are accurately present in response body. Will return error if headers are missing
+for (def i=0;i&lt;json_keycheck.size();i++){
+	for (def j=0;json_key.size()+1;j++){
+		if (j == json_key.size()+1){
+			log.info("request header missing: ${json_keycheck[i]}")//if response message is missing key, will tell which one here
+			assert false
+		}else if (json_keycheck[i] == json_key[j]){
+			break
+		}
+	}
+}
+
+log.info("Request Completed Successfully")</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="d5c44603-205e-40dd-be73-60b0726ce673" name="Schema Validation"><con:configuration><scriptText>import java.io.InputStream;   
+import java.util.Set;  
+  
+import com.fasterxml.jackson.databind.JsonNode;  
+import com.fasterxml.jackson.databind.ObjectMapper;  
+import com.networknt.schema.JsonSchema;  
+import com.networknt.schema.JsonSchemaFactory;  
+import com.networknt.schema.SpecVersion;  
+import com.networknt.schema.ValidationMessage;  
+
+// create instance of the ObjectMapper class  
+ ObjectMapper objectMapper = new ObjectMapper();  
+          
+ // create an instance of the JsonSchemaFactory using version flag  
+ JsonSchemaFactory schemaFactory = JsonSchemaFactory.getInstance( SpecVersion.VersionFlag.V201909 ); 
+
+ //take response object
+def response_message = messageExchange.responseContent
+          
+// store the JSON data in InputStream  
+File initialFile = new File("C:\\srajan\\IRS\\TestAutomation\\soapui\\tis_automation\\schema\\customer_new.txt");
+ try(  
+               
+    			 InputStream schemaStream = new FileInputStream(initialFile);
+                
+    ){  
+
+            // read data from the stream and store it into JsonNode  
+            JsonNode json = objectMapper.readTree(response_message);  
+               
+              
+            // get schema from the schemaStream and store it into JsonSchema  
+            JsonSchema schema = schemaFactory.getSchema(schemaStream);  
+              
+            // create set of validation message and store result in it  
+            Set&lt;ValidationMessage> validationResult = schema.validate( json );  
+            
+             // show the validation errors   
+            if (validationResult.isEmpty()) {  
+
+                assert true
+              
+            } else {  
+                  
+                // show all the validation error  
+                validationResult.forEach(vm -> log.info(vm.getMessage())); 
+                assert false 
+            }  
+        }  
+  </scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="25212137-7e63-4661-8ca5-d97dcb12b300" name="Script Assertion 2"><con:configuration><scriptText>
+context.testCase.testSuite.project.ResponseValidation.validateSchema(messageExchange.responseContent,"C:\\srajan\\IRS\\TestAutomation\\soapui\\tis_automation\\schema\\customer_new.txt")
+
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="memberNo" value="${#TestSuite#memberNumber}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="9f45a2dd-5bbf-406e-a71a-b4f0ded1d8fc"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>w</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>getCustomer</con:sourceStep><con:targetType>Response</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:targetPath/><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="Deserialze" id="2e204ec5-31bd-4c72-9bcb-2ab00c90e8c0" disabled="true"><con:settings/><con:config><script>import com.example.webfluxdemo.domain.Customer
+import com.fasterxml.jackson.databind.ObjectMapper // version 2.11.1
+import com.fasterxml.jackson.annotation.JsonProperty // version 2.11.1
+import groovy.json.JsonOutput 
+import com.google.gson.Gson
+//import com.google.gson.Gson
+
+def cust_info =  testRunner.testCase.testSuite.project.cust_info[0]
+
+def Customer cust = Customer.builder()
+							.custCode(cust_info.cust_code)
+							.memberNo(cust_info.member_no)
+							.memberHash(cust_info.member_hash)
+							.firstName(cust_info.first_name)
+							.lastName(cust_info.last_name)
+							.birthDate(cust_info.birth_date.toLocalDate())
+							.deathDate((cust_info.death_date == null)?null : cust_info.death_date.toLocalDate())
+							.email(cust_info.email)
+							.mobile(cust_info.mobile)
+							.home(cust_info.home)
+							.build()
+//groovy.sql.GroovyRowResult to JSON
+//def addressRecord =  testRunner.testCase.testSuite.project.addressRecord[0] 
+
+def response =  testRunner.testCase.getProperty("Response").value
+Gson gson = new Gson();
+Customer cust_response = gson.fromJson(response, Customer.class);
+ 
+
+//employees.address = address
+
+//Gson gson = new Gson();
+//Address a1 = gson.fromJson(testRunner.testCase.testSuite.project.employeeRecord[0], Employee.class);
+ 
+log.info "e1" + cust</script></con:config></con:testStep><con:testStep type="groovy" name="BuildCustomerObjectFromJson" id="a72befa7-d367-4093-887c-6e5e7aeed59c"><con:settings/><con:config><script>import com.example.webfluxdemo.domain.Customer
+import com.example.webfluxdemo.domain.Transaction
+import com.example.webfluxdemo.domain.Account
+import com.example.webfluxdemo.domain.Address
+import com.example.webfluxdemo.domain.CustomerFlag
+import com.fasterxml.jackson.databind.ObjectMapper // version 2.11.1
+import com.fasterxml.jackson.annotation.JsonProperty // version 2.11.1
+import groovy.json.JsonOutput 
+import com.google.gson.Gson
+import groovy.json.JsonSlurper
+import java.time.LocalDate;
+//import com.google.gson.Gson
+
+def cust_info =  testRunner.testCase.testSuite.project.cust_info[0]
+def cust_flag =  testRunner.testCase.testSuite.project.cust_flag[0]
+def cust_trans = testRunner.testCase.testSuite.project.cust_trans[0]
+def cust_addr = testRunner.testCase.testSuite.project.cust_addr[0]
+def cust_acct = testRunner.testCase.testSuite.project.cust_acct
+
+Customer cust = Customer.builder()
+							.custCode(cust_info.cust_code)
+							.memberNo(cust_info.member_no)
+							.memberHash(cust_info.member_hash)
+							.firstName(cust_info.first_name)
+							.lastName(cust_info.last_name)
+							.birthDate(cust_info.birth_date.toLocalDate())
+							.deathDate((cust_info.death_date == null)?null : cust_info.death_date.toLocalDate())
+							.email(cust_info.email)
+							.mobile(cust_info.mobile)
+							.home(cust_info.home)
+							.build()
+
+
+Account[] accounts = new Account[cust_acct.size]
+cust.accounts= new ArrayList&lt;Account>()
+
+def i=0
+cust_acct.each{act ->
+					log.info act
+					cust.accounts.add( Account.builder()
+							.acctYear(act.acct_year)
+							.acctHash(act.acct_year)
+							.id(act.id)
+							.memberHash(act.member_hash)
+							.balance(act.balance)
+							.addressHash(act.address_hash)
+							.build())
+
+					
+					 
+}
+
+Address addr = Address.builder()
+									.id(cust_addr.id)
+									.streetNum(cust_addr.street_num)
+									.street(cust_addr.street)
+									.address2(cust_addr.address_2)
+									.city(cust_addr.city)
+									.state(cust_addr.state)
+									.zipCode(cust_addr.zip_code)
+									.county(cust_addr.county)
+									.country(cust_addr.country)
+									.build()
+log.info cust_trans.created_on.toLocalDate()
+log.info cust_info.birth_date.toLocalDate()
+									
+Transaction trn = Transaction.builder()
+									.id(cust_trans.id)
+									.acctHash(cust_trans.acct_hash)
+									.acctYear(cust_trans.acct_year)
+									.description(cust_trans.description)
+									.createdOn(cust_trans.created_on.toLocalDate())
+									.updatedOn(cust_trans.updated_on.toLocalDate())
+									.metadata(cust_trans.metadata)
+									.build()		
+cust.accounts[0].address = addr
+cust.accounts[0].transactions= new ArrayList&lt;Transaction>()
+cust.accounts[0].transactions.add(trn)					
+CustomerFlag custflag = CustomerFlag.builder()
+									.id(cust_flag.id)
+									.memberHash(cust_flag.member_hash)
+									.isVeteran(cust_flag.is_veteran)
+									.veteranYear(cust_flag.veteran_year)
+									.vip(cust_flag.vip)
+									.homeLoan(cust_flag.home_loan)
+									.carLoan(cust_flag.car_loan)
+									.smallBusinessAccount(cust_flag.small_business_account)
+									.build()
+
+cust.customerFlags = custflag
+//cust.accounts = accounts
+
+//groovy.sql.GroovyRowResult to JSON
+//def addressRecord =  testRunner.testCase.testSuite.project.addressRecord[0] 
+
+def response =  testRunner.testCase.getProperty("Response").value
+
+//Gson gson = new Gson();
+//Customer cust_response = gson.fromJson(response, Customer.class);
+ 
+JsonSlurper slurper = new JsonSlurper()
+        def object = slurper.parseText(response)
+  object.birthDate = LocalDate.parse(object.birthDate,'MM/dd/yyyy')
+	  // object.birthDate = LocalDate.parse('20/10/2011','dd/MM/yyyy')
+        Customer cust1 = new Customer(object)
+//employees.address = address
+
+//Gson gson = new Gson();
+//Address a1 = gson.fromJson(testRunner.testCase.testSuite.project.employeeRecord[0], Employee.class);
+ 
+log.info "Object From Response" + cust1
+log.info "Object From DB" + cust
+
+if (cust1 == cust)
+{
+	log.info true
+}
+else
+{
+	log.info false
+}
+</script></con:config></con:testStep><con:testStep type="groovy" name="Copy of BuildCustomerObjectFromJson" id="53b10b74-3f91-4027-ba65-58792a6a6f0c"><con:settings/><con:config><script>import com.example.webfluxdemo.domain.Customer
+import com.example.webfluxdemo.domain.Transaction
+import com.example.webfluxdemo.domain.Account
+import com.example.webfluxdemo.domain.Address
+import com.example.webfluxdemo.domain.CustomerFlag
+import com.fasterxml.jackson.databind.ObjectMapper // version 2.11.1
+import com.fasterxml.jackson.annotation.JsonProperty // version 2.11.1
+import groovy.json.JsonOutput 
+import com.google.gson.Gson
+import groovy.json.JsonSlurper
+import java.time.LocalDate;
+//import com.google.gson.Gson
+
+def cust_info =  testRunner.testCase.testSuite.project.cust_info[0]
+def cust_flag =  testRunner.testCase.testSuite.project.cust_flag[0]
+def cust_trans = testRunner.testCase.testSuite.project.cust_trans[0]
+def cust_addr = testRunner.testCase.testSuite.project.cust_addr[0]
+def cust_acct = testRunner.testCase.testSuite.project.cust_acct
+
+Customer cust = Customer.builder()
+							.custCode(cust_info.cust_code)
+							.memberNo(cust_info.member_no)
+							.memberHash(cust_info.member_hash)
+							.firstName(cust_info.first_name)
+							.lastName(cust_info.last_name)
+						//	.birthDate(cust_info.birth_date.toLocalDate())
+							.deathDate((cust_info.death_date == null)?null : cust_info.death_date.toLocalDate())
+							.email(cust_info.email)
+							.mobile(cust_info.mobile)
+							.home(cust_info.home)
+							.build()
+
+
+Account[] accounts = new Account[cust_acct.size]
+cust.accounts= new ArrayList&lt;Account>()
+
+def i=0
+cust_acct.each{act ->
+
+					cust.accounts.add( Account.builder()
+							.acctYear(act.acct_year)
+							.acctHash(act.acct_hash)
+							.id(act.id)
+							.memberHash(act.member_hash)
+							.balance(act.balance)
+							.addressHash(act.address_hash)
+							.build())
+
+					
+					 
+}
+
+Address addr = Address.builder()
+									.id(cust_addr.id)
+									.streetNum(cust_addr.street_num)
+									.street(cust_addr.street)
+									//.address2(cust_addr.address_2)
+									.city(cust_addr.city)
+									.state(cust_addr.state)
+									.zipCode(cust_addr.zip_code)
+									.county(cust_addr.county)
+									.country(cust_addr.country)
+									.build()
+//log.info cust_trans.created_on.toLocalDate()
+//log.info cust_info.birth_date.toLocalDate()
+								
+Transaction trn = Transaction.builder()
+									.id(cust_trans.id)
+									.acctHash(cust_trans.acct_hash)
+									.acctYear(cust_trans.acct_year)
+									.description(cust_trans.description)
+									//.createdOn(cust_trans.created_on.toLocalDate())
+									//.updatedOn(cust_trans.updated_on.toLocalDate())
+									.metadata(cust_trans.metadata)
+									.build()		
+cust.accounts[0].address = addr
+cust.accounts[0].transactions= new ArrayList&lt;Transaction>()
+cust.accounts[0].transactions.add(trn)					
+CustomerFlag custflag = CustomerFlag.builder()
+									.id(cust_flag.id)
+									.memberHash(cust_flag.member_hash)
+									.isVeteran(cust_flag.is_veteran)
+									.veteranYear(cust_flag.veteran_year)
+									.vip(cust_flag.vip)
+									.homeLoan(cust_flag.home_loan)
+									.carLoan(cust_flag.car_loan)
+									.smallBusinessAccount(cust_flag.small_business_account)
+									.build()
+
+cust.customerFlags = custflag
+//cust.accounts = accounts
+
+//groovy.sql.GroovyRowResult to JSON
+//def addressRecord =  testRunner.testCase.testSuite.project.addressRecord[0] 
+
+def response =  testRunner.testCase.getProperty("Response").value
+
+Gson gson = new Gson();
+//Customer cust_response = gson.fromJson(response, Customer.class);
+ 
+JsonSlurper slurper = new JsonSlurper()
+        def object = slurper.parseText(response)
+//  object.birthDate = LocalDate.parse(object.birthDate,'MM/dd/yyyy')
+//  object.accounts[0].transactions[0].createdOn = LocalDate.parse(object.accounts[0].transactions[0].createdOn,'MM/dd/yyyy')
+//    object.accounts[0].transactions[0].updatedOn = LocalDate.parse(object.accounts[0].transactions[0].updatedOn,'MM/dd/yyyy')
+	  // object.birthDate = LocalDate.parse('20/10/2011','dd/MM/yyyy')
+        Customer cust1 = new Customer(object)
+//employees.address = address
+
+//Gson gson = new Gson();
+//Address a1 = gson.fromJson(testRunner.testCase.testSuite.project.employeeRecord[0], Employee.class);
+//cust1.accounts[0].transactions[0].updatedOn= null
+//cust1.accounts[0].transactions[0].createdOn= null
+//cust1.accounts[0].transactions[0].acct_Year="2006"
+log.info "Object From Response" + cust1
+log.info "Object From DB" + cust
+
+if (cust1 == cust)
+{
+	log.info true
+}
+else
+{
+	log.info false
+}
+
+log.info "logging json"
+log.info gson.toJson(cust) == gson.toJson(cust1)
+log.info "Object From Response" + gson.toJson(cust1)
+log.info "Object From DB" +gson.toJson(cust)
+
+//Using builder parttern  ignoring initializaion   t</script></con:config></con:testStep><con:properties><con:property><con:name>Response</con:name><con:value>{"custCode":1,"memberNo":"4027130073","memberHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","firstName":"Anatollo","lastName":"Kuhlen","email":"akuhlen0@epa.gov","mobile":"398-709-8500","home":"815-492-3856","customerFlags":{"id":1,"memberHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","veteranYear":"1996","vip":false,"homeLoan":false,"carLoan":false,"smallBusinessAccount":false,"veteran":true},"accounts":[{"acctYear":"2007","acctHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","id":1,"memberHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","balance":"113051.31","addressHash":"471ad4c4-56fd-4758-b76d-54760a821138","address":{"id":1,"streetNum":"19579","street":"Lerdahl","address2":null,"city":"Oakland","state":"CA","zipCode":"94622","county":"","country":"United States"},"transactions":[{"id":1,"acctHash":"e1a87d76-c1b3-4f4a-a89c-bcd7613e2c2b","acctYear":"2007","description":"Labial frenotomy","metadata":null}]}],"deathDate":null}</con:value></con:property></con:properties></con:testCase><con:testCase id="dfbb2ed8-ae25-4b4f-9b71-b211127977a6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="utils" searchProperties="true" disabled="true"><con:settings/><con:testStep type="groovy" name="ResponseValidation" id="e2a4c402-35cb-4aaa-997e-58a922126ad2"><con:settings/><con:config><script>import groovy.sql.Sql
+import groovy.json.*
+import java.io.InputStream;   
+import java.util.Set;  
+  
+import com.fasterxml.jackson.databind.JsonNode;  
+import com.fasterxml.jackson.databind.ObjectMapper;  
+import com.networknt.schema.JsonSchema;  
+import com.networknt.schema.JsonSchemaFactory;  
+import com.networknt.schema.SpecVersion;  
+import com.networknt.schema.ValidationMessage;  
+
+
+class ResponseValidation {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+     // The constructor below is MANDATORY
+     def ResponseValidation(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+     def validateSchema(strResponseMessage, strSchemaPath)
+     {
+     	// create instance of the ObjectMapper class  
+ 		ObjectMapper objectMapper = new ObjectMapper();  
+          
+ 		// create an instance of the JsonSchemaFactory using version flag  
+ 		JsonSchemaFactory schemaFactory = JsonSchemaFactory.getInstance( SpecVersion.VersionFlag.V201909 ); 
+
+ 		//take response object
+		def response_message = strResponseMessage
+          
+		// store the JSON data in InputStream  
+		File initialFile = new File(strSchemaPath);
+
+ 		try(  
+               
+    			 InputStream schemaStream = new FileInputStream(initialFile);
+                
+   		 ){  
+
+            // read data from the stream and store it into JsonNode  
+            JsonNode json = objectMapper.readTree(response_message);  
+               
+              
+            // get schema from the schemaStream and store it into JsonSchema  
+            JsonSchema schema = schemaFactory.getSchema(schemaStream);  
+              
+            // create set of validation message and store result in it  
+            Set&lt;ValidationMessage> validationResult = schema.validate( json );  
+            
+             // show the validation errors   
+            if (validationResult.isEmpty()) {  
+
+                assert true
+              
+            } else {  
+                  
+                // show all the validation error  
+                validationResult.forEach(vm -> log.info(vm.getMessage())); 
+                assert false 
+            }  
+        }  
+
+     }
+}
+
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "ResponseValidation", new ResponseValidation(log, context, testRunner) )
+
+//testRunner.testCase.testSuite.project.metaClass.ResponseValidation = context.ResponseValidation
+</script></con:config></con:testStep><con:testStep type="groovy" name="DatabaseUtils" id="ee787f5b-b71e-42b3-acc0-b0f879524b94"><con:settings/><con:config><script>import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "Preparing connection"
+class DatabaseUtils {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def DatabaseUtils(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+    def executeQuery( driver,strConnUrl,strConnUser, strConnPass,strQuery)
+    {
+    		//Register driver and instantiate connection object to be used by all test cases
+		com.eviware.soapui.support.GroovyUtils.registerJdbcDriver(driver)
+		def sql = Sql.newInstance(strConnUrl, strConnUser, strConnPass, driver)
+		return sql.rows(strQuery)
+    }
+}
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "DatabaseUtils", new DatabaseUtils(log, context, testRunner) )
+
+
+
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="LoadProperties" id="1cc9519c-c468-49db-aa6e-27850b642dce"><con:settings/><con:config><script>import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "File Reader Class Init"
+
+class FileReaderUtil {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def FileReaderUtil(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+def props = new Properties();
+	def loadProp(strFileName)
+	{
+		log.info "Load Properties"
+		//Read properties file to get connection parameters
+		
+		def propsFile = new File(strFileName);
+		propsFile.withInputStream {
+			 props.load(it)
+			 
+		}
+		return props
+	}
+	
+}
+
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "FileReaderUtil", new FileReaderUtil(log, context, testRunner) )
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="Account_Model" id="2a3b486a-64cf-4741-9c91-8f32b8fc4022"><con:settings/><con:config><script>import groovy.sql.*
+import com.eviware.soapui.support.types.StringToObjectMap
+
+log.info "Preparing connection"
+class Account_Model {
+     // The three following fields are MANDATORY
+     def log
+     def context
+     def testRunner
+
+   // The constructor below is MANDATORY
+     def Account_Model(log, context, testRunner) {
+        this.log = log
+        this.context = context
+        this.testRunner = testRunner
+     }
+
+    def executeQuery( account,address, transactions)
+    {
+    		//Register driver and instantiate connection object to be used by all test cases
+		com.eviware.soapui.support.GroovyUtils.registerJdbcDriver(driver)
+		def sql = Sql.newInstance(strConnUrl, strConnUser, strConnPass, driver)
+		return sql.rows(strQuery)
+    }
+}
+
+// Class instance - Other scripts elsewhere in SoapUI will access the reuse class through their context
+context.setProperty( "Account_Model", new Account_Model(log, context, testRunner) )
+
+
+
+
+
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>inputFile</con:name><con:value>C:\Users\dfairfield\Documents\memberNumbersFail011922.csv</con:value></con:property><con:property><con:name>memberNumber</con:name><con:value>4027130073</con:value></con:property><con:property><con:name>dataDrivenInputFile</con:name><con:value>C:\Users\dfairfield\Documents\DDpostgres2-23-22.csv</con:value></con:property><con:property><con:name>DDTestInputFile</con:name><con:value>C:\Users\dfairfield\Documents\ddtest.csv</con:value></con:property><con:property><con:name>fullRecord</con:name><con:value>2,4,4788331624,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,Glendon,Rippingale,4/22/1998,,grippingale1@nsw.gov.au,321-780-4964,858-843-4015,2,6fecd73a-f29c-4f0b-8be1-db3703aa5776,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,2007,2,6fecd73a-f29c-4f0b-8be1-db3703aa5776,8621,Del Sol,9,Santa Barbara,CA,93111,,United States,2,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,FALSE,1994,FALSE,TRUE,FALSE,TRUE,2,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,2007,274725.35,8a6ebe38-4d25-43aa-a93d-548999b34cd0,2,4fb97ea9-3ccc-4d2a-931b-ce8817ac481b,2007,Abdomen wall repair NEC,11/17/1970,8/1/2021,</con:value></con:property><con:property><con:name>memberNumbersArr</con:name><con:value>"1001077768","4218872937","6307244763","2575945453","3069754961"</con:value></con:property><con:property><con:name>ProjectPath</con:name><con:value>C:\srajan\IRS\TestAutomation\soapui\tis_automation</con:value></con:property><con:property><con:name>ProjectScriptPath</con:name><con:value>C:\srajan\IRS\TestAutomation\soapui\tis_automation\scripts</con:value></con:property><con:property><con:name>ProjectDataPath</con:name><con:value>C:\srajan\IRS\TestAutomation\soapui\tis_automation\data</con:value></con:property><con:property><con:name>password</con:name><con:value>sharajan</con:value></con:property><con:property><con:name>driver</con:name><con:value>org.postgresql.Driver</con:value></con:property><con:property><con:name>user</con:name><con:value>sharajan</con:value></con:property><con:property><con:name>url</con:name><con:value>jdbc:postgresql://localhost:5432/postgres</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>PropertyFile</con:name><con:value>suite.properties</con:value></con:property><con:property><con:name>Test</con:name><con:value/></con:property><con:property><con:name>FilePath</con:name><con:value>${projectDir}\tis_automation</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer><con:oAuth2Profile><con:name>Profile 1</con:name><con:accessTokenPosition>HEADER</con:accessTokenPosition><con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow><con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod></con:oAuth2Profile></con:oAuth2ProfileContainer><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
