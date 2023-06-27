@@ -23,6 +23,11 @@
 	</pluginRepositories>
 	<dependencies>
 		<dependency>
+   			 <groupId>com.google.code.gson</groupId>
+    		<artifactId>gson</artifactId>
+    		<version>2.10.1</version>
+			</dependency>
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
@@ -52,11 +57,19 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.3.1</version>
 				<configuration>
-					 <source>16</source>   <!-- maven.compiler.source  -->
-        			<target>16</target>
 					<classesDirectory>${basedir}/target/classes</classesDirectory>
 					<outputDirectory>${basedir}/ext</outputDirectory>
 				</configuration>
+				<executions>
+                   <execution>
+					   <phase>
+						   compile
+					   </phase>
+                       <goals>
+                           <goal>jar</goal>
+                       </goals>
+                   </execution>
+               </executions>
 			</plugin>
 			<plugin>
 				<groupId>com.smartbear.soapui</groupId>
