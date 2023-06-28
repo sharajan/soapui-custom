@@ -2,29 +2,26 @@ package com.example.webfluxdemo.domain;
 
 import java.util.List;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
-@Data
+
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-@Table(value = "CUST_ACCT")
+
 public class Account {
 
 	private String acctYear;
 	private String acctHash;
-	@Id
 	private int id;
 	private String memberHash;
 	private String balance;

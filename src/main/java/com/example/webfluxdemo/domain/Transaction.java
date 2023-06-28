@@ -2,8 +2,8 @@ package com.example.webfluxdemo.domain;
 
 import java.time.LocalDate;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
+
+
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -11,18 +11,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(value = "CUST_TRANS")
+
 public class Transaction {
 
-	@Id
+
 	private int id;
 	private String acctHash;
 	private String acctYear;

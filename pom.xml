@@ -34,16 +34,6 @@
 			<version>1.18.22</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-r2dbc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.r2dbc</groupId>
-			<artifactId>r2dbc-postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
 			<version>2.15.2</version>
@@ -82,8 +72,6 @@
     					<version>2.10.1</version>
 						</dependency>
 
-					<!--
-					https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all -->
 					<dependency>
 						<groupId>org.codehaus.groovy</groupId>
 						<artifactId>groovy-all</artifactId>
@@ -91,20 +79,11 @@
 						<type>pom</type>
 					</dependency>
 					<dependency>
-						<groupId>org.codehaus.groovy</groupId>
-						<artifactId>groovy-json</artifactId>
-						<version>3.0.17</version>
-					</dependency>
-					<dependency>
 						<groupId>org.postgresql</groupId>
 						<artifactId>postgresql</artifactId>
 						<version>42.6.0</version>
 					</dependency>
-					<!--<dependency>
-						<groupId>com.google.code.gson</groupId>
-						<artifactId>gson</artifactId>
-						<version>2.10.1</version>
-					</dependency>-->
+
 					<dependency>
 						<groupId>com.jgoodies</groupId>
 						<artifactId>forms</artifactId>
@@ -129,7 +108,7 @@
 					<dependency>
 						<groupId>com.networknt</groupId>
 						<artifactId>json-schema-validator</artifactId>
-						<version>1.0.85</version>
+						<version>1.0.42</version>
 					</dependency>
 
 				</dependencies>
@@ -146,13 +125,18 @@
 							<outputFolder>${basedir}/target/surefire-reports</outputFolder>
 							<junitReport>true</junitReport>
 							<exportAll>true</exportAll>
-							<printReport>true</printReport>
-							<exportAll>true</exportAll>
+
 							<!--<settingsFile></settingsFile>
 							<host></host>
 							<username></username>
 							<password></password>
 							<domain></domain>-->
+						 <soapuiProperties>
+                        	<property>
+                            	<name>soapui.logroot</name>
+                            	<value>${basedir}\logs\</value>
+                       		 </property>
+                   		 </soapuiProperties>
 							<globalProperties>
 								<value>ENV=DEV</value>
 								<value>FilePath=${basedir}\project\Sharon API Prototype-soapui-project.xml</value>

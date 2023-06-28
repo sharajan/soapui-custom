@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage("Clone Repo")
+        {
+            steps{
+                bat 'git clone https://github.com/*.git'
+            }
+        }
+        stage('Test') {
+            steps {
+                bat  ''' call cd soapui
+                      call mvn test '''
+            }
+            post {
+                always {
+                    junit 'soapui/target/surefire-reports/*.xml'
+                }
+            }
+        }
+
+    }
+}

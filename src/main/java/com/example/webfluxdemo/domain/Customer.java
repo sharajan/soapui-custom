@@ -1,10 +1,9 @@
 package com.example.webfluxdemo.domain;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 
-import org.springframework.data.relational.core.mapping.Table;
+
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -13,21 +12,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 
-@Data
+
 @Builder
 //@NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Getter
 @Setter
-@Table(value = "CUST_INFO")
+
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Customer {
 
